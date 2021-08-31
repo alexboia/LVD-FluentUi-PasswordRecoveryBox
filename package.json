@@ -2,13 +2,13 @@
 	"name": "lvd-fluentui-passwordrecoverybox",
 	"version": "0.0.1",
 	"description": "A ReactJS password change box component built using the FluentUI library",
-	"homepage": "",
+	"homepage": "https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox.git"
 	},
 	"bugs": {
-		"url": ""
+		"url": "https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/issues"
 	},
 	"main": "dist/index.umd2.js",
 	"scripts": {
