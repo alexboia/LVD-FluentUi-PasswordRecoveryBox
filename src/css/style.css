@@ -1,0 +1,32 @@
+@import '~normalize.css';
+@import '~office-ui-fabric-core/dist/css/fabric.css';
+@import './components/index.css';
+
+html {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+
+body, #root {
+	overflow-x: hidden;
+}
+
+#root {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.password-recovery-box-demo-container {
+	width: 500px;
+	margin: auto;
+	margin-top: 250px;
+}

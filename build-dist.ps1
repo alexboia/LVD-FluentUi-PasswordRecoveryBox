@@ -1,0 +1,1 @@
+webpack --config webpack-dist.config.js

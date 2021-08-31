@@ -1,0 +1,52 @@
+{
+	"name": "lvd-fluentui-passwordrecoverybox",
+	"version": "0.0.1",
+	"description": "A ReactJS password change box component built using the FluentUI library",
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"bugs": {
+		"url": ""
+	},
+	"main": "dist/index.umd2.js",
+	"scripts": {
+		"build-app": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-app.ps1",
+		"build-dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-dist.ps1",
+		"build": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-all.ps1"
+	},
+	"author": "Alexandru Boia <alexandru.boia@gmail.com>",
+	"license": "BSD-3-Clause",
+	"browser": "dist/index.umd2.js",
+	"files": [
+		"dist",
+		"demo",
+		"docs"
+	],
+	"devDependencies": {
+		"@babel/cli": "^7.14.8",
+		"@babel/core": "^7.15.0",
+		"@babel/plugin-transform-runtime": "^7.15.0",
+		"@babel/preset-env": "^7.15.0",
+		"@babel/preset-react": "^7.14.5",
+		"babel-loader": "^8.2.2",
+		"copy-webpack-plugin": "^9.0.1",
+		"css-loader": "^6.2.0",
+		"extract-loader": "^5.1.0",
+		"file-loader": "^6.2.0",
+		"mini-css-extract-plugin": "^2.2.0",
+		"normalize.css": "^8.0.1",
+		"process": "^0.11.10",
+		"webpack": "^5.50.0",
+		"webpack-cli": "^4.8.0",
+		"webpack-remove-empty-scripts": "^0.7.1",
+		"react-dom": "^17.0.2"
+	},
+	"peerDependencies": {
+		"@fluentui/react": "^8.28.2",
+		"office-ui-fabric-core": "^11.0.0",
+		"prop-types": "^15.7.2",
+		"react": "^17.0.2"
+	}
+}

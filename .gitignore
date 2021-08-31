@@ -1,0 +1,4 @@
+package_builder_logs
+component-manifest.json
+node_modules
+*.tgz
