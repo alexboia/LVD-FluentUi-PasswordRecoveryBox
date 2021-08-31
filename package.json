@@ -38,15 +38,16 @@
 		"mini-css-extract-plugin": "^2.2.0",
 		"normalize.css": "^8.0.1",
 		"process": "^0.11.10",
+		"react-dom": "^17.0.2",
 		"webpack": "^5.50.0",
 		"webpack-cli": "^4.8.0",
-		"webpack-remove-empty-scripts": "^0.7.1",
-		"react-dom": "^17.0.2"
+		"webpack-remove-empty-scripts": "^0.7.1"
 	},
 	"peerDependencies": {
 		"@fluentui/react": "^8.28.2",
 		"office-ui-fabric-core": "^11.0.0",
 		"prop-types": "^15.7.2",
-		"react": "^17.0.2"
+		"react": "^17.0.2",
+		"lvd-fluentui-passwordchangebox": "^0.0.1"
 	}
 }
