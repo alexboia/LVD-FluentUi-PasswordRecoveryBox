@@ -8,6 +8,68 @@ import PasswordRecoveryStep2 from './PasswordRecoveryStep2.jsx';
 export default class PasswordRecoveryBox extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this._handlePasswordRecoveryInitiationRequested = 	
+			this._handlePasswordRecoveryInitiationRequested.bind(this);
+		this._handlePasswordRecoveryInitiationValuesChanged = 
+			this._handlePasswordRecoveryInitiationValuesChanged.bind(this);
+		this._handleBackFromPasswordRecoveryInitiationRequested =
+			this._handleBackFromPasswordRecoveryInitiationRequested.bind(this);
+
+		this._handlePasswordChangeValuesChanged =
+			this._handlePasswordChangeValuesChanged.bind(this);
+		this._handleBackFromPasswordChangeRequested = 
+			this._handleBackFromPasswordChangeRequested.bind(this);
+		this._handlePasswordChangedRequested = 
+			this._handlePasswordChangedRequested.bind(this);
+	}
+
+	componentDidMount() {
+		if (this.props.onPasswordRecoveryBoxInitiatlized != null) {
+			this.props.onPasswordRecoveryBoxInitiatlized();
+		}
+	}
+
+	componentWillUnmount() {
+		if (this.props.onPasswordRecoveryBoxDisposed != null) {
+			this.props.onPasswordRecoveryBoxDisposed();
+		}
+	}
+
+	_handlePasswordRecoveryInitiationRequested(values) {
+		if (this.props.onPasswordRecoveryInitiationRequested != null) {
+			this.props.onPasswordRecoveryInitiationRequested(values);
+		}
+	}
+
+	_handlePasswordRecoveryInitiationValuesChanged(oldValues, newValues) {
+		if (this.props.onPasswordRecoveryInitiationValuesChanged != null) {
+			this.props.onPasswordRecoveryInitiationValuesChanged(oldValues, newValues);
+		}
+	}
+
+	_handleBackFromPasswordRecoveryInitiationRequested(values) {
+		if (this.props.onBackFromPasswordRecoveryInitiationRequested != null) {
+			this.props.onBackFromPasswordRecoveryInitiationRequested(values);
+		}
+	}
+
+	_handlePasswordChangeValuesChanged(oldValues, newValues) {
+		if (this.props.onPasswordChangeValuesChanged != null) {
+			this.props.onPasswordChangeValuesChanged(oldValues, newValues);
+		}
+	}
+
+	_handleBackFromPasswordChangeRequested(values) {
+		if (this.props.onBackFromPasswordChangeRequested != null) {
+			this.props.onBackFromPasswordChangeRequested(values);
+		}
+	}
+
+	_handlePasswordChangedRequested(values) {
+		if (this.props.onPasswordChangedRequested != null) {
+			this.props.onPasswordChangedRequested(values);
+		}
 	}
 	
 	render() {
@@ -86,6 +148,9 @@ export default class PasswordRecoveryBox extends React.Component {
 		return (
 			<PasswordRecoveryStep1 
 				{...step1Props}
+				onPasswordRecoveryInitiationRequested={this._handlePasswordRecoveryInitiationRequested}
+				onPasswordRecoveryInitiationValuesChanged={this._handlePasswordRecoveryInitiationValuesChanged}
+				onBackRequested={this._handleBackFromPasswordRecoveryInitiationRequested}
 			/>
 		);
 	}
@@ -99,6 +164,9 @@ export default class PasswordRecoveryBox extends React.Component {
 		return (
 			<PasswordRecoveryStep2 
 				{...step2Props} 
+				onPasswordChangedRequested={this._handlePasswordChangedRequested}
+				onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
+				onBackRequested={this._handleBackFromPasswordChangeRequested}
 			/>
 		);
 	}
@@ -114,5 +182,16 @@ PasswordRecoveryBox.propTypes = {
 	step: PropTypes.string,
 
 	step1Props: PropTypes.object,
-	step2Props: PropTypes.object
+	step2Props: PropTypes.object,
+
+	onPasswordRecoveryInitiationRequested: PropTypes.func,
+	onPasswordRecoveryInitiationValuesChanged: PropTypes.func,
+	onBackFromPasswordRecoveryInitiationRequested: PropTypes.func,
+	
+	onPasswordChangedRequested: PropTypes.func,
+	onPasswordChangeValuesChanged: PropTypes.func,
+	onBackFromPasswordChangeRequested: PropTypes.func,
+	
+	onPasswordRecoveryBoxInitiatlized: PropTypes.func,
+	onPasswordRecoveryBoxDisposed: PropTypes.func
 };

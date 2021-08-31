@@ -64,8 +64,8 @@ export default class PasswordRecoveryStep1 extends React.Component {
 
 	_raiseValuesChanaged(oldValues) {
 		const newValues = this._getFormValues();
-		if (this.props.onStep1ValuesChanged != null) {
-			this.props.onStep1ValuesChanged(oldValues, newValues);
+		if (this.props.onPasswordRecoveryInitiationValuesChanged != null) {
+			this.props.onPasswordRecoveryInitiationValuesChanged(oldValues, newValues);
 		}
 	}
 
@@ -276,8 +276,8 @@ PasswordRecoveryStep1.propTypes = {
 
 	onPasswordRecoveryInitiationRequested: PropTypes.func,
 	onBackRequested: PropTypes.func,
-	
-	onStep1ValuesChanged: PropTypes.func,
+	onPasswordRecoveryInitiationValuesChanged: PropTypes.func,
+
 	onStep1BoxInitialized: PropTypes.func,
 	onStep1BoxDisposed: PropTypes.func
 };
