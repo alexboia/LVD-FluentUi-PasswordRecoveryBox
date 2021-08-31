@@ -6,17 +6,21 @@ import { TextField } from '@fluentui/react';
 
 import { BackButtonPositions } from 'lvd-fluentui-passwordchangebox';
 import PasswordRecoveryStep1Defaults from './PasswordRecoveryStep1Defaults.js';
+import StepTitle from './StepTitle.jsx';
 
 export default class PasswordRecoveryStep1 extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			userIdentifier: ''
+			userIdentifier: '',
+			hasInteracted: false
 		};
 
 		this._handleUserIdentifierChanged =
 			this._handleUserIdentifierChanged.bind(this);
+		this._getUserIdentifierErrorMessage = 
+			this._getUserIdentifierErrorMessage.bind(this);
 
 		this._handlePasswordRecoveryInitiationButtonClicked = 
 			this._handlePasswordRecoveryInitiationButtonClicked.bind(this);
@@ -42,16 +46,27 @@ export default class PasswordRecoveryStep1 extends React.Component {
 	}
 
 	componentWillUnmount() {
+		const values = this._getFormValues();
 		if (this.props.onStep1BoxDisposed != null) {
-			this.props.onStep1BoxDisposed();
+			this.props.onStep1BoxDisposed(values);
 		}
 	}
 
 	_handleUserIdentifierChanged(event) {
 		event.preventDefault();
+		const oldValues = this._getFormValues();
+
 		this.setState({
-			userIdentifier: event.target.value
-		});
+			userIdentifier: event.target.value,
+			hasInteracted: true
+		}, () => this._raiseValuesChanaged(oldValues));
+	}
+
+	_raiseValuesChanaged(oldValues) {
+		const newValues = this._getFormValues();
+		if (this.props.onStep1ValuesChanged != null) {
+			this.props.onStep1ValuesChanged(oldValues, newValues);
+		}
 	}
 
 	_handlePasswordRecoveryInitiationButtonClicked(event) {
@@ -75,6 +90,8 @@ export default class PasswordRecoveryStep1 extends React.Component {
 	render() {
 		return (
 			<div className="lvd-passwordrecovery-step1" style={this._getStyle()}>
+				{this._renderTitle()}
+
 				<div className="lvd-passwordrecovery-box-fields-container">
 					{this._renderUserIdentifierField()}
 				</div>
@@ -92,6 +109,24 @@ export default class PasswordRecoveryStep1 extends React.Component {
 		return this.props.style || {};
 	}
 
+	_renderTitle() {
+		const titleProps = this._getTitleProps();
+		return (
+			<StepTitle {...titleProps} />
+		);
+	}
+
+	_getTitleProps() {
+		const titleProps = this.props.titleProps || {};
+		return {
+			show: titleProps.hasOwnProperty('show') 
+				? !!titleProps.show 
+				: true,
+			text: titleProps.text 
+				|| PasswordRecoveryStep1Defaults.title
+		};
+	}
+
 	_renderUserIdentifierField() {
 		const userIdentifierProps = this._getUserIdentifierProps();
 		const userIdentifierField = (
@@ -105,6 +140,7 @@ export default class PasswordRecoveryStep1 extends React.Component {
 				readOnly={this._isReadOnly()}
 				underlined={this._isUnderlined()}
 				onChange={this._handleUserIdentifierChanged}
+				onGetErrorMessage={this._getUserIdentifierErrorMessage}
 				required={true}
 			/>
 		);
@@ -137,6 +173,26 @@ export default class PasswordRecoveryStep1 extends React.Component {
 
 	_isUnderlined() {
 		return !!this.props.underlined;
+	}
+
+	_getUserIdentifierErrorMessage(value) {
+		const userIdentifierProps = this._getUserIdentifierProps();
+		return this._displayUserNameFieldErrorMessage(value)
+			? userIdentifierProps.emptyErrorMessage
+			: '';
+	}
+
+	_displayUserNameFieldErrorMessage(value) {
+		return !this._isValueFilledIn(value) 
+			&& this._displayFieldErrorMessages();
+	}
+
+	_isValueFilledIn(value) {
+		return (value != null && value.length > 0);
+	}
+
+	_displayFieldErrorMessages() {
+		return !!this.state.hasInteracted;
 	}
 
 	_renderField(element) {
@@ -213,6 +269,7 @@ PasswordRecoveryStep1.propTypes = {
 
 	messageProps: PropTypes.object,
 
+	titleProps: PropTypes.object,
 	userIdentifierProps: PropTypes.object,
 	passwordRecoveryInitiationButtonProps: PropTypes.object,
 	backActionButtonProps: PropTypes.object,

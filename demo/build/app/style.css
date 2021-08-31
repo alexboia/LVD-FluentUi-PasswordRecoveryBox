@@ -19334,6 +19334,64 @@ template {
   font-family: 'Selawik Web', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
+.lvd-passwordchange-box {
+	margin-top: 200px;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: calc(100% - 20px);
+}
+
+.lvd-passwordchange-box.lvd-passwordchange-box-framed {
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(112,111,112,0.45);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(112,111,112,0.45);
+	box-shadow: 0px 0px 5px 2px rgba(112,111,112,0.45);
+}
+
+.lvd-passwordchange-box.lvd-passwordchange-box-fixed {
+	width: 600px;
+}
+
+.lvd-passwordchange-box.lvd-passwordchange-box-centered {
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.lvd-passwordchange-box h4.lvd-passwordchange-box-header {
+	margin: 10px 0px 10px 0px;
+	padding: 0;
+	font-weight: 600;
+}
+
+.lvd-passwordchange-box .lvd-passwordchange-box-field {
+	margin-bottom: 10px;
+}
+
+.lvd-passwordchange-box .lvd-passwordchange-box-btn {
+	margin-right: 10px;
+}
+
+.lvd-passwordchange-box .lvd-passwordchange-box-btn.lvd-passwordchange-box-back-btn.lvd-passwordchange-box-back-btn-right {
+	float: right;
+	margin-right: 0;
+}
+
+.lvd-passwordchange-box-message {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.lvd-passwordchange-box-field .ms-TextField--underlined .ms-Label {
+	padding-left: 0px;
+}
+
+.lvd-passwordchange-box-clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+
 .lvd-passwordrecovery-box {
 	margin-top: 200px;
 	margin-bottom: 10px;
@@ -19389,6 +19447,12 @@ template {
 	clear: both;
 	margin: 0;
 	padding: 0;
+}
+
+.lvd-passwordrecovery-box .lvd-passwordchange-box {
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 html {

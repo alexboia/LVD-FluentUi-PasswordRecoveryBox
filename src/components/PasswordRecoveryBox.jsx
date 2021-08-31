@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import PasswordRecoverySteps from './PasswordRecoverySteps.js';
 import PasswordRecoveryStep1 from './PasswordRecoveryStep1.jsx';
+import PasswordRecoveryStep2 from './PasswordRecoveryStep2.jsx';
 
 export default class PasswordRecoveryBox extends React.Component {
 	constructor(props) {
@@ -12,7 +13,7 @@ export default class PasswordRecoveryBox extends React.Component {
 	render() {
 		return (
 			<div className={this._computeContainerCssClassName()} style={this._getStyle()}>
-				<PasswordRecoveryStep1 />
+				{this._renderCurrentStep()}
 			</div>
 		);
 	};
@@ -66,9 +67,52 @@ export default class PasswordRecoveryBox extends React.Component {
 	_getStyle() {
 		return this.props.style || {};
 	}
+
+	_renderCurrentStep() {
+		const stepName = this._getStep();
+		if (stepName == PasswordRecoverySteps.EnterNewPassword) {
+			return this._renderStep2();
+		} else  {
+			return this._renderStep1();
+		}
+	}
+
+	_getStep() {
+		return this.props.step || PasswordRecoverySteps.CollectUserIdentifier;
+	}
+
+	_renderStep1() {
+		const step1Props = this._getStep1Props();
+		return (
+			<PasswordRecoveryStep1 
+				{...step1Props}
+			/>
+		);
+	}
+
+	_getStep1Props() {
+		return this.props.step1Props || {};
+	}
+
+	_renderStep2() {
+		const step2Props = this._getStep2Props();
+		return (
+			<PasswordRecoveryStep2 
+				{...step2Props} 
+			/>
+		);
+	}
+
+	_getStep2Props() {
+		return this.props.step2Props || {};
+	}
 }
 
 PasswordRecoveryBox.propTypes = {
 	className: PropTypes.string,
-	style: PropTypes.object
+	style: PropTypes.object,
+	step: PropTypes.string,
+
+	step1Props: PropTypes.object,
+	step2Props: PropTypes.object
 };
