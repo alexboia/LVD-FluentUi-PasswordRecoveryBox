@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { PrimaryButton, DefaultButton } from '@fluentui/react';
 import { TextField } from '@fluentui/react';
 
-import { BackButtonPositions } from 'lvd-fluentui-passwordchangebox';
+import BackButtonPositions from './BackButtonPositions.js';
 import PasswordRecoveryStep1Defaults from './PasswordRecoveryStep1Defaults.js';
 import StepTitle from './StepTitle.jsx';
 

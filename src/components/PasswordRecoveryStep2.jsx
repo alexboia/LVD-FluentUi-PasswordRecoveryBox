@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { PasswordChangeBox } from 'lvd-fluentui-passwordchangebox';
 
 import PasswordRecoveryStep2Defaults from './PasswordRecoveryStep2Defaults.js';
+import { passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition } from './PasswordRecoveryBoxUtility.js';
 
 export default class PasswordRecoveryStep2 extends React.Component {
 	constructor(props) {
@@ -116,14 +117,17 @@ export default class PasswordRecoveryStep2 extends React.Component {
 
 	_getBackActionButtonProps() {
 		const backActionButtonProps = this.props.backActionButtonProps || {};
+
+		const backButtonPosition = backActionButtonProps.position 
+			|| PasswordRecoveryStep2Defaults.backActionButton.position;
+
 		return {
 			show: backActionButtonProps.hasOwnProperty('show')
 				? !!backActionButtonProps.show
 				: true,
 			label: backActionButtonProps.label 
 				|| PasswordRecoveryStep2Defaults.backActionButton.label,
-			position: backActionButtonProps.position
-				|| PasswordRecoveryStep2Defaults.backActionButton.position
+			position: passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition(backButtonPosition)
 		};
 	}
 }

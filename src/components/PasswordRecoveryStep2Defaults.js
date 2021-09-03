@@ -1,4 +1,4 @@
-import { BackButtonPositions } from 'lvd-fluentui-passwordchangebox';
+import BackButtonPositions from "./BackButtonPositions.js";
 
 const PasswordRecoveryStep2Defaults = {
 	title: 'Password Recovery - Set New Password',
