@@ -168,7 +168,8 @@ For convenience, the following API artefacts are forwarded from the underlying p
 | Set additional master inline css style properties | `style` | `object` | Key-value plain javascript object. Defaults to `{}`. |
 | Make component readonly | `readOnly` | `boolean` | Cascades to all fields. Defaults to `false`. Can be overridden at step level. |
 | Display fields in underlined style. | `underlined` | `boolean` | Defaults to `false`. Can be overridden at step level. |
-| Message | `messageProps` | `Message Object` | See below. By default no message is shown. Can be overridden at step level. |
+| Message | `messageProps` | `Message Object` | See below. By default no message is shown. |
+| Current step | `step` | `PasswordRecoverySteps` | What is the currently active step. Defaults to `PasswordRecoverySteps.CollectUserIdentifier`, which is the first step. See below for available values. |
 
 ### Message Object
 
@@ -191,6 +192,15 @@ Example:
 	...
 />
 ```
+
+### Steps
+
+The following [steps are available](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/components/PasswordRecoverySteps.js).
+
+| Name | Usage | Notes |
+| --- | --- | --- |
+| Collect user identification data | `PasswordRecoverySteps.CollectUserIdentifier` | First step |
+| Collect new user password information data | `PasswordRecoverySteps.EnterNewPassword` | Second step |
 
 ## User Identification Values Object
 <a name="c-userid-values"></a>
