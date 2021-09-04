@@ -30,19 +30,36 @@ The `demo` directory contains [a compiled and ready-to-run example](https://gith
 ## Basic Usage
 <a name="c-basic-usage"></a>
 
+Handling first step of the password recovery process:
+
 ```javascript
 import React from 'react';
-import { PasswordRecoveryBox } from 'lvd-fluentui-passwordrecoverybox';
+import { PasswordRecoveryBox, PasswordRecoverySteps } from 'lvd-fluentui-passwordrecoverybox';
 
 class PasswordRecoveryBoxSamplePage extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this._handlePasswordRecoveryInitiationValuesChanged = 
+			this._handlePasswordRecoveryInitiationValuesChanged.bind(this);
+		this._handlePasswordRecoveryInitiationRequested =
+			this._handlePasswordRecoveryInitiationRequested.bind(this);
+	}
+
+	_handlePasswordRecoveryInitiationValuesChanged(oldValues, newValues) {
+		//do something, if desired
+	}
+
+	_handlePasswordRecoveryInitiationRequested(newValues) {
+		//lookup identification, send recovery link if valid
 	}
 
 	render() {
 		return (
 			<PasswordRecoveryBox 
-
+				step={PasswordRecoverySteps.CollectUserIdentifier}
+				onPasswordRecoveryInitiationValuesChanged={this._handlePasswordRecoveryInitiationValuesChanged}
+				onPasswordRecoveryInitiationRequested={this._handlePasswordRecoveryInitiationRequested}
 			/>
 		);
 	}
