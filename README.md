@@ -161,11 +161,23 @@ For convenience, the following API artefacts are forwarded from the underlying p
 | What | Prop Name | Type | Notes |
 | --- | --- | --- | --- |
 
+## User Identification Values Object
+<a name="c-userid-values"></a>
+
+The user identification values are exported as a plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `userIdentifier` | `string` | - |
+
 ## Events
 <a name="c-events"></a>
 
 | Event | Prop Name | Arguments | Notes |
 | --- | --- | --- | --- |
+| User identfication values changed - Step 1 | `onPasswordRecoveryInitiationValuesChanged` | (`oldValues`:`User Identification Values Object`, `newValues`:`User Identification Values Object`) | Triggered whenerver any of fields from step 1 changes. |
+| Password recovery initation requested - Step 1 | `onPasswordRecoveryInitiationRequested` | (`User Identification Values Object`) | Trigered whenever the `Recovery my password` button is clicked |
+| Navigate back from Step 1 | `onBackFromPasswordRecoveryInitiationRequested` | (`User Identification Values Object`) | Triggered whenever the `Back` button is clicked when Step 1 is active. |
 
 ## Changelog
 <a name="c-changelog"></a>
