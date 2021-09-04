@@ -170,6 +170,8 @@ For convenience, the following API artefacts are forwarded from the underlying p
 | Display fields in underlined style. | `underlined` | `boolean` | Defaults to `false`. Can be overridden at step level. |
 | Message | `messageProps` | `Message Object` | See below. By default no message is shown. |
 | Current step | `step` | `PasswordRecoverySteps` | What is the currently active step. Defaults to `PasswordRecoverySteps.CollectUserIdentifier`, which is the first step. See below for available values. |
+| Customize the first step | `step1Props` | | |
+| Customize the second step | `step2Props` | `Password Change Box Customization Options Props` | All the properties supported by the underlying [password change box](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox), with the exception of `framed`, `centered` and `fixed`, which are set to false. |
 | Customize the back button | `backActionButtonProps` | `Back Button Customization Object` | Can be used to customize the back button for both steps. Can be overridden at step level. See below. |
 
 ### Message Object
@@ -211,7 +213,7 @@ A plain javascript object with the following properties:
 | --- | --- | --- |
 | `label` | `string` | Defaults to `Change password`. |
 | `show` | `boolean` | Whether to show the button or not. Defaults to `true`. |
-| `position` | `BackButtonPositions` | Defaults to `BackButtonPositions.left`. |
+| `position` | `BackButtonPositions` | Defaults to `BackButtonPositions.left`. See [here for all supported values](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/components/BackButtonPositions.js). |
 
 Example:
 
