@@ -30,13 +30,13 @@ The `demo` directory contains [a compiled and ready-to-run example](https://gith
 ## Basic Usage
 <a name="c-basic-usage"></a>
 
-Handling first step of the password recovery process:
+Handling the first step of the password recovery process:
 
 ```javascript
 import React from 'react';
 import { PasswordRecoveryBox, PasswordRecoverySteps } from 'lvd-fluentui-passwordrecoverybox';
 
-class PasswordRecoveryBoxSamplePage extends React.Component {
+class PasswordRecoveryBoxStep1SamplePage extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -58,6 +58,7 @@ class PasswordRecoveryBoxSamplePage extends React.Component {
 		return (
 			<PasswordRecoveryBox 
 				step={PasswordRecoverySteps.CollectUserIdentifier}
+				messageProps={/* use this to display a message after processing */}
 				onPasswordRecoveryInitiationValuesChanged={this._handlePasswordRecoveryInitiationValuesChanged}
 				onPasswordRecoveryInitiationRequested={this._handlePasswordRecoveryInitiationRequested}
 			/>
@@ -66,7 +67,44 @@ class PasswordRecoveryBoxSamplePage extends React.Component {
 }
 ```
 
-You can find a full working example [here]().
+Handling the second step of the password recovery process:
+
+```javascript
+import React from 'react';
+import { PasswordRecoveryBox, PasswordRecoverySteps } from 'lvd-fluentui-passwordrecoverybox';
+
+class PasswordRecoveryBoxStep2SamplePage extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this._handlePasswordChangeValuesChanged = 
+			this._handlePasswordChangeValuesChanged.bind(this);
+		this._handlePasswordChangedRequested = 
+			this._handlePasswordChangedRequested.bind(this);
+	}
+
+	_handlePasswordChangeValuesChanged(oldValues, newValues) {
+		//do something, if desired
+	}
+
+	_handlePasswordChangedRequested(values) {
+		//validate and change new password
+	}
+
+	render() {
+		return (
+			<PasswordRecoveryBox 
+				step={PasswordRecoverySteps.EnterNewPassword}
+				messageProps={/* use this to display a message after processing */}
+				onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
+				onPasswordChangedRequested={this._handlePasswordChangedRequested}
+			/>
+		);
+	}
+}
+```
+
+You can find a full working example [here](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/App.jsx).
 
 ## Styling
 <a name="c-styling"></a>
