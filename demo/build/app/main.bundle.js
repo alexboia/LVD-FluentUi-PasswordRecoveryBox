@@ -68788,7 +68788,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
 
 var PasswordRecoveryStep1Defaults = {
-  title: 'Password recovery',
+  title: 'Password recovery - Identify yourself',
   userIdentifier: {
     label: 'E-mail address:',
     placeholder: 'Please fill in your e-mail address',

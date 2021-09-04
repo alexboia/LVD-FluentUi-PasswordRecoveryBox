@@ -1,7 +1,7 @@
 import BackButtonPositions from "./BackButtonPositions.js";
 
 const PasswordRecoveryStep1Defaults = {
-	title: 'Password recovery',
+	title: 'Password recovery - Identify yourself',
 
 	userIdentifier: {
 		label: 'E-mail address:',

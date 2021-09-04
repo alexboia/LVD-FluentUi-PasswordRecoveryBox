@@ -1,6 +1,21 @@
 # LVD-FluentUi-PasswordRecoveryBox
 
-A ReactJS password change box component built using the FluentUI library
+A ReactJS password recovery box built using the [FluentUI library](https://github.com/microsoft/fluentui), comprised of two steps:
+
+- password identification step - user provides some sort of identification to kick of the process;
+- password change step - user enters a new password, after a password recovery link has been sent to the user's e-mail address.
+
+For the password change step, the [LVD-FluentUi-PasswordChangeBox](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox) is used, to which all its documented props are forwarded.
+
+Here's a set screenshots of how it all looks like [using the default styling](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/css/style.css):
+
+<p align="left">
+	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/main/docs/Capture-Step1.png" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />
+</p>
+
+<p align="left">
+	<img align="center" src="https://raw.githubusercontent.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/main/docs/Capture-Step2.png" style="margin-bottom: 20px; margin-right: 20px; border-radius: 5px;" />
+</p>
 
 ## Installation
 <a name="c-installation"></a>
