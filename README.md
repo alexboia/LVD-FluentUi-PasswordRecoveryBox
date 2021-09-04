@@ -22,6 +22,11 @@ Here's a set screenshots of how it all looks like [using the default styling](ht
 
 `npm install --save lvd-fluentui-passwordrecoverybox`
 
+## Demo
+<a name="c-demo"></a>
+
+The `demo` directory contains [a compiled and ready-to-run example](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/tree/main/demo). Just open up the `index.html` file.
+
 ## Basic Usage
 <a name="c-basic-usage"></a>
 
@@ -103,3 +108,5 @@ npm run build
 
 I put some of my free time into developing and maintaining this plugin.
 If helped you in your projects and you are happy with it, you can...
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q01KGLM)
