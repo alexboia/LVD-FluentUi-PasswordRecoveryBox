@@ -27,6 +27,9 @@ Here's a set screenshots of how it all looks like [using the default styling](ht
 
 The `demo` directory contains [a compiled and ready-to-run example](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/tree/main/demo). Just open up the `index.html` file.
 
+- For step 1, use `test@email.com` to advance to next step. Any other value will display an error message.
+- On the second step, enter any password you like. 
+
 ## Basic Usage
 <a name="c-basic-usage"></a>
 
