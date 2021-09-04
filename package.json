@@ -10,6 +10,16 @@
 	"bugs": {
 		"url": "https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/issues"
 	},
+	"keywords": [
+		"react",
+		"reactjs",
+		"reactjs-components",
+		"password-recovery",
+		"password-reset",
+		"password-change",
+		"password",
+		"fluent-ui"
+	],
 	"main": "dist/index.umd2.js",
 	"scripts": {
 		"build-app": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-app.ps1",
