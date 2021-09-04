@@ -139,6 +139,22 @@ To build both in one sitting:
 npm run build
 ```
 
+## Forwarded APIs
+
+For convenience, the following API artefacts are forwarded from the underlying password change box component (which itself, forwards them from the underyling (password box component)[https://github.com/alexboia/LVD-FluentUi-PasswordBox]):
+
+- `PasswordCallbackRule`,
+- `PasswordRegexRule`,
+- `PasswordEvaluator`,
+- `PasswordLengthRule`,
+
+- `PasswordStrengthIndicator`,
+- `StrengthIndicatorStyles`,
+- `PasswordStrengthLevels`,
+
+- `getAllAvailableLevels`,
+- `getAvailableLevelCount`.
+
 ## Customization Options
 <a name="c-customization"></a>
 
