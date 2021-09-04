@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { PrimaryButton, DefaultButton } from '@fluentui/react';
+import { PrimaryButton, DefaultButton, MessageBar } from '@fluentui/react';
 import { TextField } from '@fluentui/react';
 
 import BackButtonPositions from './BackButtonPositions.js';
 import PasswordRecoveryStep1Defaults from './PasswordRecoveryStep1Defaults.js';
 import StepTitle from './StepTitle.jsx';
+
+import { passwordRecoveryBoxMessageTypeToOfficeUiMessageType } from './PasswordRecoveryBoxUtility.js';
 
 export default class PasswordRecoveryStep1 extends React.Component {
 	constructor(props) {
@@ -93,6 +95,7 @@ export default class PasswordRecoveryStep1 extends React.Component {
 				{this._renderTitle()}
 
 				<div className="lvd-passwordrecovery-box-fields-container">
+					{this._renderMessage()}
 					{this._renderUserIdentifierField()}
 				</div>
 
@@ -124,6 +127,28 @@ export default class PasswordRecoveryStep1 extends React.Component {
 				: true,
 			text: titleProps.text 
 				|| PasswordRecoveryStep1Defaults.title
+		};
+	}
+
+	_renderMessage() {
+		const messageProps = this._getMessageProps();
+		return !!messageProps.message && (
+			<MessageBar
+				className="lvd-passwordrecovery-box-message"
+				messageBarType={messageProps.type}
+				isMultiline={true}>
+				{messageProps.message}
+			</MessageBar>
+		);
+	}
+
+	_getMessageProps() {
+		const messageProps = this.props.messageProps || {};
+		const messageType = passwordRecoveryBoxMessageTypeToOfficeUiMessageType(messageProps.type || null);
+
+		return {
+			message: messageProps.message || null,
+			type: messageType 
 		};
 	}
 

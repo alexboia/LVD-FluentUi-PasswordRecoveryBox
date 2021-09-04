@@ -121,7 +121,6 @@ export default class PasswordRecoveryBox extends React.Component {
 			: true;
 	}
 
-
 	_getClassName() {
 		return this.props.className || null;
 	}
@@ -156,7 +155,29 @@ export default class PasswordRecoveryBox extends React.Component {
 	}
 
 	_getStep1Props() {
-		return this.props.step1Props || {};
+		const step1Props = this.props.step1Props || {};
+		return Object.assign(this._getCommonProps(), 
+			step1Props);
+	}
+
+	_getCommonProps() {
+		return {
+			disabled: this._isDisabled(),
+			messageProps: this._getMessageProps(),
+			backActionButtonProps: this._getBackActionButtonProps()
+		};
+	}
+
+	_isDisabled() {
+		return !!this.props.disabled;
+	}
+
+	_getMessageProps() {
+		return this.props.messageProps || {};
+	}
+
+	_getBackActionButtonProps() {
+		return this.props.backActionButtonProps || {};
 	}
 
 	_renderStep2() {
@@ -172,17 +193,24 @@ export default class PasswordRecoveryBox extends React.Component {
 	}
 
 	_getStep2Props() {
-		return this.props.step2Props || {};
+		const step2Props = this.props.step2Props || {};
+		return Object.assign(this._getCommonProps(), 
+			step2Props);
 	}
 }
 
 PasswordRecoveryBox.propTypes = {
 	className: PropTypes.string,
 	style: PropTypes.object,
+	disabled: PropTypes.bool,
 	step: PropTypes.string,
+
+	messageProps: PropTypes.object,
 
 	step1Props: PropTypes.object,
 	step2Props: PropTypes.object,
+
+	backActionButtonProps: PropTypes.object,
 
 	onPasswordRecoveryInitiationRequested: PropTypes.func,
 	onPasswordRecoveryInitiationValuesChanged: PropTypes.func,

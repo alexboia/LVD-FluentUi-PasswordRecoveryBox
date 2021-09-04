@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { PasswordChangeBox } from 'lvd-fluentui-passwordchangebox';
 
 import PasswordRecoveryStep2Defaults from './PasswordRecoveryStep2Defaults.js';
-import { passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition } from './PasswordRecoveryBoxUtility.js';
+import { 
+	passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition, 
+	passwordRecoveryBoxMessageTypePasswordChangeBoxMessageType 
+} from './PasswordRecoveryBoxUtility.js';
 
 export default class PasswordRecoveryStep2 extends React.Component {
 	constructor(props) {
@@ -59,6 +62,7 @@ export default class PasswordRecoveryStep2 extends React.Component {
 				underlined={this._isUnderlined()}
 				canReveal={this._canReveal()}
 				requireExistingPassword={false}
+				messageProps={this._getMessagProps()}
 				titleProps={this._getTitleProps()}
 				newPasswordProps={this._getNewPasswordProps()}
 				confirmNewPasswordProps={this._getConfirmNewPasswordProps()}
@@ -66,11 +70,10 @@ export default class PasswordRecoveryStep2 extends React.Component {
 				backActionButtonProps={this._getBackActionButtonProps()}
 				onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
 				onBackRequested={this._handleBackRequested}
-				onPasswordChangedRequested={this._handlePasswordChangeValuesChanged}
+				onPasswordChangedRequested={this._handlePasswordChangedRequested}
 			/>
 		);
 	}
-	
 
 	_isDisabled() {
 		return !!this.props.disabled;
@@ -85,7 +88,19 @@ export default class PasswordRecoveryStep2 extends React.Component {
 	}
 
 	_canReveal() {
-		return !!this.props.canReveal;
+		return this.props.hasOwnProperty('canReveal')
+			? !!this.props.canReveal
+			: true;
+	}
+
+	_getMessagProps() {
+		const messageProps = this.props.messageProps || {};
+		const messageType = passwordRecoveryBoxMessageTypePasswordChangeBoxMessageType(messageProps.type || null);
+
+		return {
+			message: messageProps.message || null,
+			type: messageType
+		};
 	}
 
 	_getTitleProps() {
@@ -138,6 +153,8 @@ PasswordRecoveryStep2.propTypes = {
 	style: PropTypes.object,
 	underlined: PropTypes.bool,
 	canReveal: PropTypes.bool,
+
+	messageProps: PropTypes.object,
 
 	titleProps: PropTypes.object,
 	confirmNewPasswordProps: PropTypes.object,

@@ -1,5 +1,222 @@
+.clear {
+	clear: both;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.lvd-passwordbox-root .ms-TextField--underlined .ms-Label {
+	padding-left: 0px;
+}
+.lvd-passwordbox-strength {
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+/* Bar style */
+
+.lvd-passwordbox-strength-bar,
+.lvd-passwordbox-strength-bar .lvd-passwordbox-strength-bar-meter {
+	height: 3px;
+	display: block;
+}
+
+.lvd-passwordbox-strength-bar {
+	border: 1px solid lightgray;
+}
+
+.lvd-passwordbox-strength-bar .lvd-passwordbox-strength-bar-meter {
+	background-color: lightgray;
+}
+
+.lvd-passwordbox-strength-bar.very-weak {
+	border: 1px solid #9b2226;
+}	
+
+.lvd-passwordbox-strength-bar.very-weak .lvd-passwordbox-strength-bar-meter {
+	background-color: #9b2226;
+}
+
+.lvd-passwordbox-strength-bar.weak {
+	border: 1px solid #ee9b00;
+}
+
+.lvd-passwordbox-strength-bar.weak .lvd-passwordbox-strength-bar-meter {
+	background-color: #ee9b00;
+}
+
+.lvd-passwordbox-strength-bar.medium {
+	border: 1px solid #e9d8a6;
+}
+
+.lvd-passwordbox-strength-bar.medium .lvd-passwordbox-strength-bar-meter {
+	background-color: #e9d8a6;
+}
+
+.lvd-passwordbox-strength-bar.strong {
+	border: 1px solid #118ab2;
+}
+
+.lvd-passwordbox-strength-bar.strong .lvd-passwordbox-strength-bar-meter {
+	background-color: #118ab2;
+}
+
+.lvd-passwordbox-strength-bar.very-strong {
+	border: 1px solid #55a630;
+}
+
+.lvd-passwordbox-strength-bar.very-strong .lvd-passwordbox-strength-bar-meter {
+	background-color: #55a630;
+}
+
+/* Intermittent bar style */
+
+.lvd-passwordbox-strength-intermittent-bar,
+.lvd-passwordbox-strength-intermittent-bar .lvd-passwordbox-strength-intermittent-bar-segment {
+	height: 3px;
+	display: block;
+}
+
+.lvd-passwordbox-strength-intermittent-bar-segment {
+	width: calc(20% - 7px);
+	margin-right: 5px;
+	float: left;
+	border: 1px solid lightgray;
+}
+
+.lvd-passwordbox-strength-intermittent-bar-segment.is-active { 
+	background-color: lightgray;
+}
+
+.lvd-passwordbox-strength-intermittent-bar-segment.very-strong {
+	width: calc(20% - 2px);
+	margin-right: 0px;
+	border: 1px solid #55a630;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.very-weak .lvd-passwordbox-strength-intermittent-bar-segment {
+	border: 1px solid #9b2226;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.very-weak .lvd-passwordbox-strength-intermittent-bar-segment.is-active {
+	background-color: #9b2226;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.weak .lvd-passwordbox-strength-intermittent-bar-segment {
+	border: 1px solid #ee9b00;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.weak .lvd-passwordbox-strength-intermittent-bar-segment.is-active {
+	background-color: #ee9b00;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.medium .lvd-passwordbox-strength-intermittent-bar-segment {
+	border: 1px solid #e9d8a6;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.medium .lvd-passwordbox-strength-intermittent-bar-segment.is-active {
+	background-color: #e9d8a6;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.strong .lvd-passwordbox-strength-intermittent-bar-segment {
+	border: 1px solid #118ab2;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.strong .lvd-passwordbox-strength-intermittent-bar-segment.is-active {
+	background-color: #118ab2;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.very-strong .lvd-passwordbox-strength-intermittent-bar-segment {
+	border: 1px solid #55a630;
+}
+
+.lvd-passwordbox-strength-intermittent-bar.very-strong .lvd-passwordbox-strength-intermittent-bar-segment.is-active {
+	background-color: #55a630;
+}
+
+/* Text style */
+
+.lvd-passwordbox-strength-text {
+	text-align: center;
+	color: lightgray;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.lvd-passwordbox-strength-text.very-weak {
+	color: #9b2226;
+}
+
+.lvd-passwordbox-strength-text.weak {
+	color: #ee9b00;
+}
+
+.lvd-passwordbox-strength-text.medium {
+	color: #e9d8a6;
+}
+
+.lvd-passwordbox-strength-text.strong {
+	color: #118ab2;
+}
+
+.lvd-passwordbox-strength-text.very-strong {
+	color: #55a630;
+}
+.lvd-passwordbox-rules-container {
+	padding-top: 10px;
+}
+
+.lvd-passwordbox-rules-container ul,
+.lvd-passwordbox-rules-container ul li {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lvd-passwordbox-rules-container ul li {
+	margin-bottom: 10px;
+	height: 21px;
+	line-height: 21px;
+	vertical-align: middle;
+	font-size: 13px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f8f9fa;
+}
+
+.lvd-passwordbox-rules-container ul li:first-of-type {
+	margin-top: 5px;
+}
+
+.lvd-passwordbox-rules-container ul li:last-of-type {
+	margin-bottom: 0px;
+}
+
+li.lvd-passwordbox-rule .lvd-passwordbox-rule-icon {
+	margin-right: 10px;
+	font-size: 11px;
+	color: #fff;
+	border-radius: 50%;
+	padding: 3px;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	vertical-align: top;
+	text-align: center;
+}
+
+li.lvd-passwordbox-rule.is-not-rule-met .lvd-passwordbox-rule-icon {
+	background-color: #9b2226;
+}
+
+li.lvd-passwordbox-rule.is-rule-met .lvd-passwordbox-rule-icon {
+	background-color: #55a630;
+}
+
+
 .lvd-passwordchange-box {
-	margin-top: 200px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
 	width: calc(100% - 20px);

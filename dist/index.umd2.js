@@ -7,7 +7,7 @@
 		exports["PasswordRecoveryBox"] = factory(require("@fluentui/react"), require("prop-types"), require("react"));
 	else
 		root["PasswordRecoveryBox"] = factory(root["FluentUIReact"], root["PropTypes"], root["React"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE__16__, __WEBPACK_EXTERNAL_MODULE__13__, __WEBPACK_EXTERNAL_MODULE__12__) {
+})(self, function(__WEBPACK_EXTERNAL_MODULE__4__, __WEBPACK_EXTERNAL_MODULE__5__, __WEBPACK_EXTERNAL_MODULE__6__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
@@ -18,812 +18,24 @@ return /******/ (() => { // webpackBootstrap
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ PasswordRecoveryBox)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(13);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(14);
-/* harmony import */ var _PasswordRecoveryStep1_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(15);
-/* harmony import */ var _PasswordRecoveryStep2_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(20);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__);
 
-
-
-
-
-
-
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__.default)(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-
-
-
-
-
-
-var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
-  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__.default)(PasswordRecoveryBox, _React$Component);
-
-  var _super = _createSuper(PasswordRecoveryBox);
-
-  function PasswordRecoveryBox(props) {
-    var _this;
-
-    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__.default)(this, PasswordRecoveryBox);
-
-    _this = _super.call(this, props);
-    _this._handlePasswordRecoveryInitiationRequested = _this._handlePasswordRecoveryInitiationRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this._handlePasswordRecoveryInitiationValuesChanged = _this._handlePasswordRecoveryInitiationValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this._handleBackFromPasswordRecoveryInitiationRequested = _this._handleBackFromPasswordRecoveryInitiationRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this._handlePasswordChangeValuesChanged = _this._handlePasswordChangeValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this._handleBackFromPasswordChangeRequested = _this._handleBackFromPasswordChangeRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    _this._handlePasswordChangedRequested = _this._handlePasswordChangedRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
-    return _this;
-  }
-
-  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__.default)(PasswordRecoveryBox, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.props.onPasswordRecoveryBoxInitiatlized != null) {
-        this.props.onPasswordRecoveryBoxInitiatlized();
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      if (this.props.onPasswordRecoveryBoxDisposed != null) {
-        this.props.onPasswordRecoveryBoxDisposed();
-      }
-    }
-  }, {
-    key: "_handlePasswordRecoveryInitiationRequested",
-    value: function _handlePasswordRecoveryInitiationRequested(values) {
-      if (this.props.onPasswordRecoveryInitiationRequested != null) {
-        this.props.onPasswordRecoveryInitiationRequested(values);
-      }
-    }
-  }, {
-    key: "_handlePasswordRecoveryInitiationValuesChanged",
-    value: function _handlePasswordRecoveryInitiationValuesChanged(oldValues, newValues) {
-      if (this.props.onPasswordRecoveryInitiationValuesChanged != null) {
-        this.props.onPasswordRecoveryInitiationValuesChanged(oldValues, newValues);
-      }
-    }
-  }, {
-    key: "_handleBackFromPasswordRecoveryInitiationRequested",
-    value: function _handleBackFromPasswordRecoveryInitiationRequested(values) {
-      if (this.props.onBackFromPasswordRecoveryInitiationRequested != null) {
-        this.props.onBackFromPasswordRecoveryInitiationRequested(values);
-      }
-    }
-  }, {
-    key: "_handlePasswordChangeValuesChanged",
-    value: function _handlePasswordChangeValuesChanged(oldValues, newValues) {
-      if (this.props.onPasswordChangeValuesChanged != null) {
-        this.props.onPasswordChangeValuesChanged(oldValues, newValues);
-      }
-    }
-  }, {
-    key: "_handleBackFromPasswordChangeRequested",
-    value: function _handleBackFromPasswordChangeRequested(values) {
-      if (this.props.onBackFromPasswordChangeRequested != null) {
-        this.props.onBackFromPasswordChangeRequested(values);
-      }
-    }
-  }, {
-    key: "_handlePasswordChangedRequested",
-    value: function _handlePasswordChangedRequested(values) {
-      if (this.props.onPasswordChangedRequested != null) {
-        this.props.onPasswordChangedRequested(values);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("div", {
-        className: this._computeContainerCssClassName(),
-        style: this._getStyle()
-      }, this._renderCurrentStep());
-    }
-  }, {
-    key: "_computeContainerCssClassName",
-    value: function _computeContainerCssClassName() {
-      var containerClassName = ['lvd-passwordrecovery-box'];
-
-      if (this._useFramedLayout()) {
-        containerClassName.push('lvd-passwordrecovery-box-framed');
-      }
-
-      if (this._useFixedLayout()) {
-        containerClassName.push('lvd-passwordrecovery-box-fixed');
-      }
-
-      if (this._useCenteredLayout()) {
-        containerClassName.push('lvd-passwordrecovery-box-centered');
-      }
-
-      var className = this._getClassName();
-
-      if (!!className) {
-        containerClassName.push(className);
-      }
-
-      return containerClassName.join(' ');
-    }
-  }, {
-    key: "_useFramedLayout",
-    value: function _useFramedLayout() {
-      return this.props.hasOwnProperty('framed') ? !!this.props.framed : true;
-    }
-  }, {
-    key: "_useFixedLayout",
-    value: function _useFixedLayout() {
-      return this.props.hasOwnProperty('fixed') ? !!this.props.fixed : true;
-    }
-  }, {
-    key: "_useCenteredLayout",
-    value: function _useCenteredLayout() {
-      return this.props.hasOwnProperty('centered') ? !!this.props.centered : true;
-    }
-  }, {
-    key: "_getClassName",
-    value: function _getClassName() {
-      return this.props.className || null;
-    }
-  }, {
-    key: "_getStyle",
-    value: function _getStyle() {
-      return this.props.style || {};
-    }
-  }, {
-    key: "_renderCurrentStep",
-    value: function _renderCurrentStep() {
-      var stepName = this._getStep();
-
-      if (stepName == _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_9__.default.EnterNewPassword) {
-        return this._renderStep2();
-      } else {
-        return this._renderStep1();
-      }
-    }
-  }, {
-    key: "_getStep",
-    value: function _getStep() {
-      return this.props.step || _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_9__.default.CollectUserIdentifier;
-    }
-  }, {
-    key: "_renderStep1",
-    value: function _renderStep1() {
-      var step1Props = this._getStep1Props();
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_PasswordRecoveryStep1_jsx__WEBPACK_IMPORTED_MODULE_10__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, step1Props, {
-        onPasswordRecoveryInitiationRequested: this._handlePasswordRecoveryInitiationRequested,
-        onPasswordRecoveryInitiationValuesChanged: this._handlePasswordRecoveryInitiationValuesChanged,
-        onBackRequested: this._handleBackFromPasswordRecoveryInitiationRequested
-      }));
-    }
-  }, {
-    key: "_getStep1Props",
-    value: function _getStep1Props() {
-      return this.props.step1Props || {};
-    }
-  }, {
-    key: "_renderStep2",
-    value: function _renderStep2() {
-      var step2Props = this._getStep2Props();
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_PasswordRecoveryStep2_jsx__WEBPACK_IMPORTED_MODULE_11__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, step2Props, {
-        onPasswordChangedRequested: this._handlePasswordChangedRequested,
-        onPasswordChangeValuesChanged: this._handlePasswordChangeValuesChanged,
-        onBackRequested: this._handleBackFromPasswordChangeRequested
-      }));
-    }
-  }, {
-    key: "_getStep2Props",
-    value: function _getStep2Props() {
-      return this.props.step2Props || {};
-    }
-  }]);
-
-  return PasswordRecoveryBox;
-}((react__WEBPACK_IMPORTED_MODULE_7___default().Component));
-
-
-PasswordRecoveryBox.propTypes = {
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
-  style: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
-  step: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
-  step1Props: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
-  step2Props: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
-  onPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordRecoveryInitiationValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onBackFromPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordChangedRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordChangeValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onBackFromPasswordChangeRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordRecoveryBoxInitiatlized: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordRecoveryBoxDisposed: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func)
+var BackButtonPositions = {
+  left: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.BackButtonPositions.left,
+  right: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.BackButtonPositions.right
 };
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackButtonPositions);
 
 /***/ }),
 /* 3 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _extends)
-/* harmony export */ });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-/* 4 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _classCallCheck)
-/* harmony export */ });
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-/***/ }),
-/* 5 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _createClass)
-/* harmony export */ });
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-/***/ }),
-/* 6 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
-/* harmony export */ });
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-/***/ }),
-/* 7 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inherits)
-/* harmony export */ });
-/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
-}
-
-/***/ }),
-/* 8 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
-/* harmony export */ });
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-/***/ }),
-/* 9 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _possibleConstructorReturn)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-/* harmony import */ var _assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
-
-
-function _possibleConstructorReturn(self, call) {
-  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__.default)(call) === "object" || typeof call === "function")) {
-    return call;
-  } else if (call !== void 0) {
-    throw new TypeError("Derived constructors may only return object or undefined");
-  }
-
-  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__.default)(self);
-}
-
-/***/ }),
-/* 10 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _typeof)
-/* harmony export */ });
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-/***/ }),
-/* 11 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _getPrototypeOf)
-/* harmony export */ });
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-/***/ }),
-/* 12 */
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__12__;
-
-/***/ }),
-/* 13 */
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__13__;
-
-/***/ }),
-/* 14 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var PasswordRecoverySteps = {
-  CollectUserIdentifier: 'collect-user-identifier',
-  EnterNewPassword: 'enter-new-password'
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PasswordRecoverySteps);
-
-/***/ }),
-/* 15 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ PasswordRecoveryStep1)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(11);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(13);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(16);
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(17);
-/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(18);
-/* harmony import */ var _StepTitle_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(19);
-
-
-
-
-
-
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__.default)(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-
-
-
-
-
-
-
-
-var PasswordRecoveryStep1 = /*#__PURE__*/function (_React$Component) {
-  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__.default)(PasswordRecoveryStep1, _React$Component);
-
-  var _super = _createSuper(PasswordRecoveryStep1);
-
-  function PasswordRecoveryStep1(props) {
-    var _this;
-
-    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this, PasswordRecoveryStep1);
-
-    _this = _super.call(this, props);
-    _this.state = {
-      userIdentifier: '',
-      hasInteracted: false
-    };
-    _this._handleUserIdentifierChanged = _this._handleUserIdentifierChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
-    _this._getUserIdentifierErrorMessage = _this._getUserIdentifierErrorMessage.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
-    _this._handlePasswordRecoveryInitiationButtonClicked = _this._handlePasswordRecoveryInitiationButtonClicked.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
-    _this._handleBackButtonClicked = _this._handleBackButtonClicked.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
-    return _this;
-  }
-
-  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(PasswordRecoveryStep1, [{
-    key: "_getFormValues",
-    value: function _getFormValues() {
-      return {
-        userIdentifier: this.state.userIdentifier
-      };
-    }
-  }, {
-    key: "_isFormValid",
-    value: function _isFormValid() {
-      var formValues = this._getFormValues();
-
-      return !!formValues.userIdentifier;
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.props.onStep1BoxInitialized != null) {
-        this.props.onStep1BoxInitialized();
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      var values = this._getFormValues();
-
-      if (this.props.onStep1BoxDisposed != null) {
-        this.props.onStep1BoxDisposed(values);
-      }
-    }
-  }, {
-    key: "_handleUserIdentifierChanged",
-    value: function _handleUserIdentifierChanged(event) {
-      var _this2 = this;
-
-      event.preventDefault();
-
-      var oldValues = this._getFormValues();
-
-      this.setState({
-        userIdentifier: event.target.value,
-        hasInteracted: true
-      }, function () {
-        return _this2._raiseValuesChanaged(oldValues);
-      });
-    }
-  }, {
-    key: "_raiseValuesChanaged",
-    value: function _raiseValuesChanaged(oldValues) {
-      var newValues = this._getFormValues();
-
-      if (this.props.onPasswordRecoveryInitiationValuesChanged != null) {
-        this.props.onPasswordRecoveryInitiationValuesChanged(oldValues, newValues);
-      }
-    }
-  }, {
-    key: "_handlePasswordRecoveryInitiationButtonClicked",
-    value: function _handlePasswordRecoveryInitiationButtonClicked(event) {
-      event.preventDefault();
-
-      var values = this._getFormValues();
-
-      if (this.props.onPasswordRecoveryInitiationRequested != null) {
-        this.props.onPasswordRecoveryInitiationRequested(values);
-      }
-    }
-  }, {
-    key: "_handleBackButtonClicked",
-    value: function _handleBackButtonClicked(event) {
-      event.preventDefault();
-
-      var values = this._getFormValues();
-
-      if (this.props.onBackRequested != null) {
-        this.props.onBackRequested(values);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
-        className: "lvd-passwordrecovery-step1",
-        style: this._getStyle()
-      }, this._renderTitle(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
-        className: "lvd-passwordrecovery-box-fields-container"
-      }, this._renderUserIdentifierField()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
-        className: "lvd-passwordrecovery-box-button-container"
-      }, this._renderPasswordRecoveryInitiationActionButton(), this._renderBackActionButtonButton(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
-        className: "lvd-passwordrecovery-box-clear"
-      })));
-    }
-  }, {
-    key: "_getStyle",
-    value: function _getStyle() {
-      return this.props.style || {};
-    }
-  }, {
-    key: "_renderTitle",
-    value: function _renderTitle() {
-      var titleProps = this._getTitleProps();
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_StepTitle_jsx__WEBPACK_IMPORTED_MODULE_11__.default, titleProps);
-    }
-  }, {
-    key: "_getTitleProps",
-    value: function _getTitleProps() {
-      var titleProps = this.props.titleProps || {};
-      return {
-        show: titleProps.hasOwnProperty('show') ? !!titleProps.show : true,
-        text: titleProps.text || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.title
-      };
-    }
-  }, {
-    key: "_renderUserIdentifierField",
-    value: function _renderUserIdentifierField() {
-      var userIdentifierProps = this._getUserIdentifierProps();
-
-      var userIdentifierField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.TextField, {
-        type: "text",
-        value: this.state.userIdentifier,
-        label: userIdentifierProps.label,
-        placeholder: userIdentifierProps.placeholder,
-        description: userIdentifierProps.description,
-        disabled: this._isDisabled(),
-        readOnly: this._isReadOnly(),
-        underlined: this._isUnderlined(),
-        onChange: this._handleUserIdentifierChanged,
-        onGetErrorMessage: this._getUserIdentifierErrorMessage,
-        required: true
-      });
-      return this._renderField(userIdentifierField);
-    }
-  }, {
-    key: "_getUserIdentifierProps",
-    value: function _getUserIdentifierProps() {
-      var userIdentifierProps = this.props.userIdentifierProps || {};
-      return {
-        label: userIdentifierProps.label || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.label,
-        placeholder: userIdentifierProps.hasOwnProperty('placeholder') ? userIdentifierProps.placeholder || null : _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.placeholder,
-        description: userIdentifierProps.description || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.description,
-        emptyErrorMessage: userIdentifierProps.emptyErrorMessage || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.messages.empty
-      };
-    }
-  }, {
-    key: "_isDisabled",
-    value: function _isDisabled() {
-      return !!this.props.disabled;
-    }
-  }, {
-    key: "_isReadOnly",
-    value: function _isReadOnly() {
-      return !!this.props.readOnly;
-    }
-  }, {
-    key: "_isUnderlined",
-    value: function _isUnderlined() {
-      return !!this.props.underlined;
-    }
-  }, {
-    key: "_getUserIdentifierErrorMessage",
-    value: function _getUserIdentifierErrorMessage(value) {
-      var userIdentifierProps = this._getUserIdentifierProps();
-
-      return this._displayUserNameFieldErrorMessage(value) ? userIdentifierProps.emptyErrorMessage : '';
-    }
-  }, {
-    key: "_displayUserNameFieldErrorMessage",
-    value: function _displayUserNameFieldErrorMessage(value) {
-      return !this._isValueFilledIn(value) && this._displayFieldErrorMessages();
-    }
-  }, {
-    key: "_isValueFilledIn",
-    value: function _isValueFilledIn(value) {
-      return value != null && value.length > 0;
-    }
-  }, {
-    key: "_displayFieldErrorMessages",
-    value: function _displayFieldErrorMessages() {
-      return !!this.state.hasInteracted;
-    }
-  }, {
-    key: "_renderField",
-    value: function _renderField(element) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
-        className: "lvd-passwordrecovery-box-field"
-      }, element);
-    }
-  }, {
-    key: "_renderPasswordRecoveryInitiationActionButton",
-    value: function _renderPasswordRecoveryInitiationActionButton() {
-      var enableSubmit = this._isFormValid() && !this._isDisabled();
-
-      var passwordRecoveryInitiationButtonProps = this._getPasswordRecoveryInitiationActionButtonProps();
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.PrimaryButton, {
-        disabled: !enableSubmit,
-        className: "lvd-passwordrecovery-box-btn lvd-passwordrecovery-box-passwordchange-btn",
-        text: passwordRecoveryInitiationButtonProps.label,
-        onClick: this._handlePasswordRecoveryInitiationButtonClicked
-      });
-    }
-  }, {
-    key: "_getPasswordRecoveryInitiationActionButtonProps",
-    value: function _getPasswordRecoveryInitiationActionButtonProps() {
-      var passwordRecoveryInitiationButtonProps = this.props.passwordRecoveryInitiationButtonProps || {};
-      return {
-        label: passwordRecoveryInitiationButtonProps.label || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.passwordRecoveryInitiationButton.label
-      };
-    }
-  }, {
-    key: "_renderBackActionButtonButton",
-    value: function _renderBackActionButtonButton() {
-      var backActionButtonProps = this._getBackActionButtonProps();
-
-      return backActionButtonProps.show && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.DefaultButton, {
-        primary: false,
-        className: this._computeBackActionButtonCssClassName(backActionButtonProps),
-        text: backActionButtonProps.label,
-        disabled: this._isDisabled(),
-        onClick: this._handleBackButtonClicked
-      });
-    }
-  }, {
-    key: "_getBackActionButtonProps",
-    value: function _getBackActionButtonProps() {
-      var backActionButtonProps = this.props.backActionButtonProps || {};
-      return {
-        show: backActionButtonProps.hasOwnProperty('show') ? !!backActionButtonProps.show : true,
-        label: backActionButtonProps.label || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.backActionButton.label,
-        position: backActionButtonProps.position || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.backActionButton.position
-      };
-    }
-  }, {
-    key: "_computeBackActionButtonCssClassName",
-    value: function _computeBackActionButtonCssClassName(backActionButtonProps) {
-      var positionClassName = 'lvd-passwordrecovery-box-back-btn-left';
-      var baseClassName = 'lvd-passwordrecovery-box-btn lvd-passwordrecovery-box-back-btn';
-
-      if (backActionButtonProps.position == lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_9__.BackButtonPositions.right) {
-        positionClassName = 'lvd-passwordrecovery-box-back-btn-right';
-      }
-
-      return "".concat(baseClassName, " ").concat(positionClassName);
-    }
-  }]);
-
-  return PasswordRecoveryStep1;
-}((react__WEBPACK_IMPORTED_MODULE_6___default().Component));
-
-
-PasswordRecoveryStep1.propTypes = {
-  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-  readOnly: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-  style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
-  underlined: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-  messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
-  titleProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
-  userIdentifierProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
-  passwordRecoveryInitiationButtonProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
-  backActionButtonProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
-  onPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
-  onBackRequested: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
-  onPasswordRecoveryInitiationValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
-  onStep1BoxInitialized: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
-  onStep1BoxDisposed: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func)
-};
-
-/***/ }),
-/* 16 */
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__16__;
-
-/***/ }),
-/* 17 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
-		module.exports = factory(__webpack_require__(16), __webpack_require__(13), __webpack_require__(12));
+		module.exports = factory(__webpack_require__(4), __webpack_require__(5), __webpack_require__(6));
 	else {}
 })(self, function(__WEBPACK_EXTERNAL_MODULE__3__, __WEBPACK_EXTERNAL_MODULE__17__, __WEBPACK_EXTERNAL_MODULE__16__) {
 return /******/ (() => { // webpackBootstrap
@@ -3519,6 +2731,15 @@ var __webpack_exports__ = {};
 "use strict";
 __nested_webpack_require_112332__.r(__webpack_exports__);
 /* harmony export */ __nested_webpack_require_112332__.d(__webpack_exports__, {
+/* harmony export */   "PasswordCallbackRule": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.PasswordCallbackRule),
+/* harmony export */   "PasswordRegexRule": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.PasswordRegexRule),
+/* harmony export */   "PasswordEvaluator": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.PasswordEvaluator),
+/* harmony export */   "PasswordLengthRule": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.PasswordLengthRule),
+/* harmony export */   "PasswordStrengthIndicator": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.PasswordStrengthIndicator),
+/* harmony export */   "StrengthIndicatorStyles": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.StrengthIndicatorStyles),
+/* harmony export */   "PasswordStrengthLevels": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.PasswordStrengthLevels),
+/* harmony export */   "getAllAvailableLevels": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.getAllAvailableLevels),
+/* harmony export */   "getAvailableLevelCount": () => (/* reexport safe */ lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__.getAvailableLevelCount),
 /* harmony export */   "successMessage": () => (/* reexport safe */ _PasswordChangeBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.successMessage),
 /* harmony export */   "errorMessage": () => (/* reexport safe */ _PasswordChangeBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.errorMessage),
 /* harmony export */   "warningMessage": () => (/* reexport safe */ _PasswordChangeBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.warningMessage),
@@ -3531,6 +2752,9 @@ __nested_webpack_require_112332__.r(__webpack_exports__);
 /* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_112332__(4);
 /* harmony import */ var _PasswordChangeBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__ = __nested_webpack_require_112332__(5);
 /* harmony import */ var _PasswordChangeBox_jsx__WEBPACK_IMPORTED_MODULE_3__ = __nested_webpack_require_112332__(7);
+/* harmony import */ var lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__ = __nested_webpack_require_112332__(18);
+/* harmony import */ var lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__nested_webpack_require_112332__.n(lvd_fluentui_passwordbox__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -3544,7 +2768,28 @@ __nested_webpack_require_112332__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 18 */
+/* 4 */
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__4__;
+
+/***/ }),
+/* 5 */
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__5__;
+
+/***/ }),
+/* 6 */
+/***/ ((module) => {
+
+"use strict";
+module.exports = __WEBPACK_EXTERNAL_MODULE__6__;
+
+/***/ }),
+/* 7 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3552,8 +2797,975 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__);
+
+var PasswordRecoveryBoxMessageType = {
+  info: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.PasswordChangeBoxMessageType.info,
+  error: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.PasswordChangeBoxMessageType.error,
+  blocked: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.PasswordChangeBoxMessageType.blocked,
+  severeWarning: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.PasswordChangeBoxMessageType.severeWarning,
+  success: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.PasswordChangeBoxMessageType.success,
+  warning: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.PasswordChangeBoxMessageType.warning
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PasswordRecoveryBoxMessageType);
+
+/***/ }),
+/* 8 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "passwordRecoveryBoxMessageTypeToOfficeUiMessageType": () => (/* binding */ passwordRecoveryBoxMessageTypeToOfficeUiMessageType),
+/* harmony export */   "passwordRecoveryBoxMessageTypePasswordChangeBoxMessageType": () => (/* binding */ passwordRecoveryBoxMessageTypePasswordChangeBoxMessageType),
+/* harmony export */   "successMessage": () => (/* binding */ successMessage),
+/* harmony export */   "errorMessage": () => (/* binding */ errorMessage),
+/* harmony export */   "warningMessage": () => (/* binding */ warningMessage),
+/* harmony export */   "infoMessage": () => (/* binding */ infoMessage),
+/* harmony export */   "passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition": () => (/* binding */ passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
+/* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2);
+
+
+var _officeUiMessageTypeM, _passwordChangeBoxMes, _passwordChangeBoxBac;
+
+
+
+
+
+
+var officeUiMessageTypeMapping = (_officeUiMessageTypeM = {}, (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_officeUiMessageTypeM, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.info, _fluentui_react__WEBPACK_IMPORTED_MODULE_1__.MessageBarType.info), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_officeUiMessageTypeM, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.error, _fluentui_react__WEBPACK_IMPORTED_MODULE_1__.MessageBarType.error), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_officeUiMessageTypeM, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.warning, _fluentui_react__WEBPACK_IMPORTED_MODULE_1__.MessageBarType.warning), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_officeUiMessageTypeM, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.severeWarning, _fluentui_react__WEBPACK_IMPORTED_MODULE_1__.MessageBarType.severeWarning), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_officeUiMessageTypeM, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.success, _fluentui_react__WEBPACK_IMPORTED_MODULE_1__.MessageBarType.success), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_officeUiMessageTypeM, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.blocked, _fluentui_react__WEBPACK_IMPORTED_MODULE_1__.MessageBarType.blocked), _officeUiMessageTypeM);
+var passwordChangeBoxMessageTypeMapping = (_passwordChangeBoxMes = {}, (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxMes, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.info, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.PasswordChangeBoxMessageType.info), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxMes, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.error, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.PasswordChangeBoxMessageType.error), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxMes, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.warning, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.PasswordChangeBoxMessageType.warning), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxMes, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.severeWarning, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.PasswordChangeBoxMessageType.severeWarning), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxMes, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.success, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.PasswordChangeBoxMessageType.success), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxMes, _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.blocked, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.PasswordChangeBoxMessageType.blocked), _passwordChangeBoxMes);
+function passwordRecoveryBoxMessageTypeToOfficeUiMessageType(passwordRecoveryBoxMessageType) {
+  var officeUiMessageType = null;
+
+  if (!!passwordRecoveryBoxMessageType && officeUiMessageTypeMapping.hasOwnProperty(passwordRecoveryBoxMessageType)) {
+    officeUiMessageType = officeUiMessageTypeMapping[passwordRecoveryBoxMessageType];
+  }
+
+  return officeUiMessageType;
+}
+function passwordRecoveryBoxMessageTypePasswordChangeBoxMessageType(passwordRecoveryBoxMessageType) {
+  var passwordChangeBoxMessageType = null;
+
+  if (!!passwordRecoveryBoxMessageType && passwordChangeBoxMessageTypeMapping.hasOwnProperty(passwordRecoveryBoxMessageType)) {
+    passwordChangeBoxMessageType = passwordChangeBoxMessageTypeMapping[passwordRecoveryBoxMessageType];
+  }
+
+  return passwordChangeBoxMessageType;
+}
+function successMessage(message) {
+  return {
+    type: _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.success,
+    message: message
+  };
+}
+function errorMessage(message) {
+  return {
+    type: _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.error,
+    message: message
+  };
+}
+function warningMessage(message) {
+  return {
+    type: _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.warning,
+    message: message
+  };
+}
+function infoMessage(message) {
+  return {
+    type: _PasswordRecoveryBoxMessageType__WEBPACK_IMPORTED_MODULE_3__.default.info,
+    message: message
+  };
+}
+var passwordChangeBoxBackButtonPositionsMapping = (_passwordChangeBoxBac = {}, (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxBac, _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_4__.default.left, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.BackButtonPositions.left), (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(_passwordChangeBoxBac, _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_4__.default.right, lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_2__.BackButtonPositions.right), _passwordChangeBoxBac);
+function passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition(passwordRecoveryBoxBackButtonPosition) {
+  var passwordChangeBoxBackButtonPosition = null;
+
+  if (!!passwordRecoveryBoxBackButtonPosition && passwordChangeBoxBackButtonPositionsMapping.hasOwnProperty(passwordRecoveryBoxBackButtonPosition)) {
+    passwordChangeBoxBackButtonPosition = passwordChangeBoxBackButtonPositionsMapping[passwordRecoveryBoxBackButtonPosition];
+  }
+
+  return passwordChangeBoxBackButtonPosition;
+}
+
+/***/ }),
+/* 9 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _defineProperty)
+/* harmony export */ });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+/* 10 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PasswordRecoveryBox)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(15);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(17);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(20);
+/* harmony import */ var _PasswordRecoveryStep1_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(21);
+/* harmony import */ var _PasswordRecoveryStep2_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(24);
+
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+
+
+
+var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
+  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__.default)(PasswordRecoveryBox, _React$Component);
+
+  var _super = _createSuper(PasswordRecoveryBox);
+
+  function PasswordRecoveryBox(props) {
+    var _this;
+
+    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__.default)(this, PasswordRecoveryBox);
+
+    _this = _super.call(this, props);
+    _this._handlePasswordRecoveryInitiationRequested = _this._handlePasswordRecoveryInitiationRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handlePasswordRecoveryInitiationValuesChanged = _this._handlePasswordRecoveryInitiationValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handleBackFromPasswordRecoveryInitiationRequested = _this._handleBackFromPasswordRecoveryInitiationRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handlePasswordChangeValuesChanged = _this._handlePasswordChangeValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handleBackFromPasswordChangeRequested = _this._handleBackFromPasswordChangeRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handlePasswordChangedRequested = _this._handlePasswordChangedRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    return _this;
+  }
+
+  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__.default)(PasswordRecoveryBox, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.onPasswordRecoveryBoxInitiatlized != null) {
+        this.props.onPasswordRecoveryBoxInitiatlized();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this.props.onPasswordRecoveryBoxDisposed != null) {
+        this.props.onPasswordRecoveryBoxDisposed();
+      }
+    }
+  }, {
+    key: "_handlePasswordRecoveryInitiationRequested",
+    value: function _handlePasswordRecoveryInitiationRequested(values) {
+      if (this.props.onPasswordRecoveryInitiationRequested != null) {
+        this.props.onPasswordRecoveryInitiationRequested(values);
+      }
+    }
+  }, {
+    key: "_handlePasswordRecoveryInitiationValuesChanged",
+    value: function _handlePasswordRecoveryInitiationValuesChanged(oldValues, newValues) {
+      if (this.props.onPasswordRecoveryInitiationValuesChanged != null) {
+        this.props.onPasswordRecoveryInitiationValuesChanged(oldValues, newValues);
+      }
+    }
+  }, {
+    key: "_handleBackFromPasswordRecoveryInitiationRequested",
+    value: function _handleBackFromPasswordRecoveryInitiationRequested(values) {
+      if (this.props.onBackFromPasswordRecoveryInitiationRequested != null) {
+        this.props.onBackFromPasswordRecoveryInitiationRequested(values);
+      }
+    }
+  }, {
+    key: "_handlePasswordChangeValuesChanged",
+    value: function _handlePasswordChangeValuesChanged(oldValues, newValues) {
+      if (this.props.onPasswordChangeValuesChanged != null) {
+        this.props.onPasswordChangeValuesChanged(oldValues, newValues);
+      }
+    }
+  }, {
+    key: "_handleBackFromPasswordChangeRequested",
+    value: function _handleBackFromPasswordChangeRequested(values) {
+      if (this.props.onBackFromPasswordChangeRequested != null) {
+        this.props.onBackFromPasswordChangeRequested(values);
+      }
+    }
+  }, {
+    key: "_handlePasswordChangedRequested",
+    value: function _handlePasswordChangedRequested(values) {
+      if (this.props.onPasswordChangedRequested != null) {
+        this.props.onPasswordChangedRequested(values);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("div", {
+        className: this._computeContainerCssClassName(),
+        style: this._getStyle()
+      }, this._renderCurrentStep());
+    }
+  }, {
+    key: "_computeContainerCssClassName",
+    value: function _computeContainerCssClassName() {
+      var containerClassName = ['lvd-passwordrecovery-box'];
+
+      if (this._useFramedLayout()) {
+        containerClassName.push('lvd-passwordrecovery-box-framed');
+      }
+
+      if (this._useFixedLayout()) {
+        containerClassName.push('lvd-passwordrecovery-box-fixed');
+      }
+
+      if (this._useCenteredLayout()) {
+        containerClassName.push('lvd-passwordrecovery-box-centered');
+      }
+
+      var className = this._getClassName();
+
+      if (!!className) {
+        containerClassName.push(className);
+      }
+
+      return containerClassName.join(' ');
+    }
+  }, {
+    key: "_useFramedLayout",
+    value: function _useFramedLayout() {
+      return this.props.hasOwnProperty('framed') ? !!this.props.framed : true;
+    }
+  }, {
+    key: "_useFixedLayout",
+    value: function _useFixedLayout() {
+      return this.props.hasOwnProperty('fixed') ? !!this.props.fixed : true;
+    }
+  }, {
+    key: "_useCenteredLayout",
+    value: function _useCenteredLayout() {
+      return this.props.hasOwnProperty('centered') ? !!this.props.centered : true;
+    }
+  }, {
+    key: "_getClassName",
+    value: function _getClassName() {
+      return this.props.className || null;
+    }
+  }, {
+    key: "_getStyle",
+    value: function _getStyle() {
+      return this.props.style || {};
+    }
+  }, {
+    key: "_renderCurrentStep",
+    value: function _renderCurrentStep() {
+      var stepName = this._getStep();
+
+      if (stepName == _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_9__.default.EnterNewPassword) {
+        return this._renderStep2();
+      } else {
+        return this._renderStep1();
+      }
+    }
+  }, {
+    key: "_getStep",
+    value: function _getStep() {
+      return this.props.step || _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_9__.default.CollectUserIdentifier;
+    }
+  }, {
+    key: "_renderStep1",
+    value: function _renderStep1() {
+      var step1Props = this._getStep1Props();
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_PasswordRecoveryStep1_jsx__WEBPACK_IMPORTED_MODULE_10__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, step1Props, {
+        onPasswordRecoveryInitiationRequested: this._handlePasswordRecoveryInitiationRequested,
+        onPasswordRecoveryInitiationValuesChanged: this._handlePasswordRecoveryInitiationValuesChanged,
+        onBackRequested: this._handleBackFromPasswordRecoveryInitiationRequested
+      }));
+    }
+  }, {
+    key: "_getStep1Props",
+    value: function _getStep1Props() {
+      var step1Props = this.props.step1Props || {};
+      return Object.assign(this._getCommonProps(), step1Props);
+    }
+  }, {
+    key: "_getCommonProps",
+    value: function _getCommonProps() {
+      return {
+        disabled: this._isDisabled(),
+        messageProps: this._getMessageProps(),
+        backActionButtonProps: this._getBackActionButtonProps()
+      };
+    }
+  }, {
+    key: "_isDisabled",
+    value: function _isDisabled() {
+      return !!this.props.disabled;
+    }
+  }, {
+    key: "_getMessageProps",
+    value: function _getMessageProps() {
+      return this.props.messageProps || {};
+    }
+  }, {
+    key: "_getBackActionButtonProps",
+    value: function _getBackActionButtonProps() {
+      return this.props.backActionButtonProps || {};
+    }
+  }, {
+    key: "_renderStep2",
+    value: function _renderStep2() {
+      var step2Props = this._getStep2Props();
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_PasswordRecoveryStep2_jsx__WEBPACK_IMPORTED_MODULE_11__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, step2Props, {
+        onPasswordChangedRequested: this._handlePasswordChangedRequested,
+        onPasswordChangeValuesChanged: this._handlePasswordChangeValuesChanged,
+        onBackRequested: this._handleBackFromPasswordChangeRequested
+      }));
+    }
+  }, {
+    key: "_getStep2Props",
+    value: function _getStep2Props() {
+      var step2Props = this.props.step2Props || {};
+      return Object.assign(this._getCommonProps(), step2Props);
+    }
+  }]);
+
+  return PasswordRecoveryBox;
+}((react__WEBPACK_IMPORTED_MODULE_7___default().Component));
+
+
+PasswordRecoveryBox.propTypes = {
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
+  style: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+  step: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
+  messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+  step1Props: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+  step2Props: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+  backActionButtonProps: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+  onPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordRecoveryInitiationValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onBackFromPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordChangedRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordChangeValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onBackFromPasswordChangeRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordRecoveryBoxInitiatlized: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordRecoveryBoxDisposed: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func)
+};
+
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+/* 12 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _classCallCheck)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _createClass)
+/* harmony export */ });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
+/* harmony export */ });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+/* 15 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _inherits)
+/* harmony export */ });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+}
+
+/***/ }),
+/* 16 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
+/* harmony export */ });
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+/* 17 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _possibleConstructorReturn)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
+
+
+function _possibleConstructorReturn(self, call) {
+  if (call && ((0,_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__.default)(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return (0,_assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__.default)(self);
+}
+
+/***/ }),
+/* 18 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */ });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+/***/ }),
+/* 19 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _getPrototypeOf)
+/* harmony export */ });
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+/***/ }),
+/* 20 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var PasswordRecoverySteps = {
+  CollectUserIdentifier: 'collect-user-identifier',
+  EnterNewPassword: 'enter-new-password'
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PasswordRecoverySteps);
+
+/***/ }),
+/* 21 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PasswordRecoveryStep1)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(4);
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(2);
+/* harmony import */ var _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(22);
+/* harmony import */ var _StepTitle_jsx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(23);
+/* harmony import */ var _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(8);
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+
+
+
+
+
+
+var PasswordRecoveryStep1 = /*#__PURE__*/function (_React$Component) {
+  (0,_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__.default)(PasswordRecoveryStep1, _React$Component);
+
+  var _super = _createSuper(PasswordRecoveryStep1);
+
+  function PasswordRecoveryStep1(props) {
+    var _this;
+
+    (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__.default)(this, PasswordRecoveryStep1);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      userIdentifier: '',
+      hasInteracted: false
+    };
+    _this._handleUserIdentifierChanged = _this._handleUserIdentifierChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
+    _this._getUserIdentifierErrorMessage = _this._getUserIdentifierErrorMessage.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
+    _this._handlePasswordRecoveryInitiationButtonClicked = _this._handlePasswordRecoveryInitiationButtonClicked.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
+    _this._handleBackButtonClicked = _this._handleBackButtonClicked.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
+    return _this;
+  }
+
+  (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__.default)(PasswordRecoveryStep1, [{
+    key: "_getFormValues",
+    value: function _getFormValues() {
+      return {
+        userIdentifier: this.state.userIdentifier
+      };
+    }
+  }, {
+    key: "_isFormValid",
+    value: function _isFormValid() {
+      var formValues = this._getFormValues();
+
+      return !!formValues.userIdentifier;
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.onStep1BoxInitialized != null) {
+        this.props.onStep1BoxInitialized();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      var values = this._getFormValues();
+
+      if (this.props.onStep1BoxDisposed != null) {
+        this.props.onStep1BoxDisposed(values);
+      }
+    }
+  }, {
+    key: "_handleUserIdentifierChanged",
+    value: function _handleUserIdentifierChanged(event) {
+      var _this2 = this;
+
+      event.preventDefault();
+
+      var oldValues = this._getFormValues();
+
+      this.setState({
+        userIdentifier: event.target.value,
+        hasInteracted: true
+      }, function () {
+        return _this2._raiseValuesChanaged(oldValues);
+      });
+    }
+  }, {
+    key: "_raiseValuesChanaged",
+    value: function _raiseValuesChanaged(oldValues) {
+      var newValues = this._getFormValues();
+
+      if (this.props.onPasswordRecoveryInitiationValuesChanged != null) {
+        this.props.onPasswordRecoveryInitiationValuesChanged(oldValues, newValues);
+      }
+    }
+  }, {
+    key: "_handlePasswordRecoveryInitiationButtonClicked",
+    value: function _handlePasswordRecoveryInitiationButtonClicked(event) {
+      event.preventDefault();
+
+      var values = this._getFormValues();
+
+      if (this.props.onPasswordRecoveryInitiationRequested != null) {
+        this.props.onPasswordRecoveryInitiationRequested(values);
+      }
+    }
+  }, {
+    key: "_handleBackButtonClicked",
+    value: function _handleBackButtonClicked(event) {
+      event.preventDefault();
+
+      var values = this._getFormValues();
+
+      if (this.props.onBackRequested != null) {
+        this.props.onBackRequested(values);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
+        className: "lvd-passwordrecovery-step1",
+        style: this._getStyle()
+      }, this._renderTitle(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
+        className: "lvd-passwordrecovery-box-fields-container"
+      }, this._renderMessage(), this._renderUserIdentifierField()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
+        className: "lvd-passwordrecovery-box-button-container"
+      }, this._renderPasswordRecoveryInitiationActionButton(), this._renderBackActionButtonButton(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
+        className: "lvd-passwordrecovery-box-clear"
+      })));
+    }
+  }, {
+    key: "_getStyle",
+    value: function _getStyle() {
+      return this.props.style || {};
+    }
+  }, {
+    key: "_renderTitle",
+    value: function _renderTitle() {
+      var titleProps = this._getTitleProps();
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_StepTitle_jsx__WEBPACK_IMPORTED_MODULE_11__.default, titleProps);
+    }
+  }, {
+    key: "_getTitleProps",
+    value: function _getTitleProps() {
+      var titleProps = this.props.titleProps || {};
+      return {
+        show: titleProps.hasOwnProperty('show') ? !!titleProps.show : true,
+        text: titleProps.text || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.title
+      };
+    }
+  }, {
+    key: "_renderMessage",
+    value: function _renderMessage() {
+      var messageProps = this._getMessageProps();
+
+      return !!messageProps.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.MessageBar, {
+        className: "lvd-passwordrecovery-box-message",
+        messageBarType: messageProps.type,
+        isMultiline: true
+      }, messageProps.message);
+    }
+  }, {
+    key: "_getMessageProps",
+    value: function _getMessageProps() {
+      var messageProps = this.props.messageProps || {};
+      var messageType = (0,_PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_12__.passwordRecoveryBoxMessageTypeToOfficeUiMessageType)(messageProps.type || null);
+      return {
+        message: messageProps.message || null,
+        type: messageType
+      };
+    }
+  }, {
+    key: "_renderUserIdentifierField",
+    value: function _renderUserIdentifierField() {
+      var userIdentifierProps = this._getUserIdentifierProps();
+
+      var userIdentifierField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.TextField, {
+        type: "text",
+        value: this.state.userIdentifier,
+        label: userIdentifierProps.label,
+        placeholder: userIdentifierProps.placeholder,
+        description: userIdentifierProps.description,
+        disabled: this._isDisabled(),
+        readOnly: this._isReadOnly(),
+        underlined: this._isUnderlined(),
+        onChange: this._handleUserIdentifierChanged,
+        onGetErrorMessage: this._getUserIdentifierErrorMessage,
+        required: true
+      });
+      return this._renderField(userIdentifierField);
+    }
+  }, {
+    key: "_getUserIdentifierProps",
+    value: function _getUserIdentifierProps() {
+      var userIdentifierProps = this.props.userIdentifierProps || {};
+      return {
+        label: userIdentifierProps.label || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.label,
+        placeholder: userIdentifierProps.hasOwnProperty('placeholder') ? userIdentifierProps.placeholder || null : _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.placeholder,
+        description: userIdentifierProps.description || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.description,
+        emptyErrorMessage: userIdentifierProps.emptyErrorMessage || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.userIdentifier.messages.empty
+      };
+    }
+  }, {
+    key: "_isDisabled",
+    value: function _isDisabled() {
+      return !!this.props.disabled;
+    }
+  }, {
+    key: "_isReadOnly",
+    value: function _isReadOnly() {
+      return !!this.props.readOnly;
+    }
+  }, {
+    key: "_isUnderlined",
+    value: function _isUnderlined() {
+      return !!this.props.underlined;
+    }
+  }, {
+    key: "_getUserIdentifierErrorMessage",
+    value: function _getUserIdentifierErrorMessage(value) {
+      var userIdentifierProps = this._getUserIdentifierProps();
+
+      return this._displayUserNameFieldErrorMessage(value) ? userIdentifierProps.emptyErrorMessage : '';
+    }
+  }, {
+    key: "_displayUserNameFieldErrorMessage",
+    value: function _displayUserNameFieldErrorMessage(value) {
+      return !this._isValueFilledIn(value) && this._displayFieldErrorMessages();
+    }
+  }, {
+    key: "_isValueFilledIn",
+    value: function _isValueFilledIn(value) {
+      return value != null && value.length > 0;
+    }
+  }, {
+    key: "_displayFieldErrorMessages",
+    value: function _displayFieldErrorMessages() {
+      return !!this.state.hasInteracted;
+    }
+  }, {
+    key: "_renderField",
+    value: function _renderField(element) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
+        className: "lvd-passwordrecovery-box-field"
+      }, element);
+    }
+  }, {
+    key: "_renderPasswordRecoveryInitiationActionButton",
+    value: function _renderPasswordRecoveryInitiationActionButton() {
+      var enableSubmit = this._isFormValid() && !this._isDisabled();
+
+      var passwordRecoveryInitiationButtonProps = this._getPasswordRecoveryInitiationActionButtonProps();
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.PrimaryButton, {
+        disabled: !enableSubmit,
+        className: "lvd-passwordrecovery-box-btn lvd-passwordrecovery-box-passwordchange-btn",
+        text: passwordRecoveryInitiationButtonProps.label,
+        onClick: this._handlePasswordRecoveryInitiationButtonClicked
+      });
+    }
+  }, {
+    key: "_getPasswordRecoveryInitiationActionButtonProps",
+    value: function _getPasswordRecoveryInitiationActionButtonProps() {
+      var passwordRecoveryInitiationButtonProps = this.props.passwordRecoveryInitiationButtonProps || {};
+      return {
+        label: passwordRecoveryInitiationButtonProps.label || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.passwordRecoveryInitiationButton.label
+      };
+    }
+  }, {
+    key: "_renderBackActionButtonButton",
+    value: function _renderBackActionButtonButton() {
+      var backActionButtonProps = this._getBackActionButtonProps();
+
+      return backActionButtonProps.show && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_8__.DefaultButton, {
+        primary: false,
+        className: this._computeBackActionButtonCssClassName(backActionButtonProps),
+        text: backActionButtonProps.label,
+        disabled: this._isDisabled(),
+        onClick: this._handleBackButtonClicked
+      });
+    }
+  }, {
+    key: "_getBackActionButtonProps",
+    value: function _getBackActionButtonProps() {
+      var backActionButtonProps = this.props.backActionButtonProps || {};
+      return {
+        show: backActionButtonProps.hasOwnProperty('show') ? !!backActionButtonProps.show : true,
+        label: backActionButtonProps.label || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.backActionButton.label,
+        position: backActionButtonProps.position || _PasswordRecoveryStep1Defaults_js__WEBPACK_IMPORTED_MODULE_10__.default.backActionButton.position
+      };
+    }
+  }, {
+    key: "_computeBackActionButtonCssClassName",
+    value: function _computeBackActionButtonCssClassName(backActionButtonProps) {
+      var positionClassName = 'lvd-passwordrecovery-box-back-btn-left';
+      var baseClassName = 'lvd-passwordrecovery-box-btn lvd-passwordrecovery-box-back-btn';
+
+      if (backActionButtonProps.position == _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_9__.default.right) {
+        positionClassName = 'lvd-passwordrecovery-box-back-btn-right';
+      }
+
+      return "".concat(baseClassName, " ").concat(positionClassName);
+    }
+  }]);
+
+  return PasswordRecoveryStep1;
+}((react__WEBPACK_IMPORTED_MODULE_6___default().Component));
+
+
+PasswordRecoveryStep1.propTypes = {
+  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
+  readOnly: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
+  style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  underlined: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
+  messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  titleProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  userIdentifierProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  passwordRecoveryInitiationButtonProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  backActionButtonProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
+  onPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
+  onBackRequested: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
+  onPasswordRecoveryInitiationValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
+  onStep1BoxInitialized: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func),
+  onStep1BoxDisposed: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func)
+};
+
+/***/ }),
+/* 22 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
 var PasswordRecoveryStep1Defaults = {
   title: 'Password recovery',
@@ -3571,13 +3783,13 @@ var PasswordRecoveryStep1Defaults = {
   backActionButton: {
     show: true,
     label: 'Back to log-in',
-    position: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.BackButtonPositions.left
+    position: _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__.default.left
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PasswordRecoveryStep1Defaults);
 
 /***/ }),
-/* 19 */
+/* 23 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3585,14 +3797,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ StepTitle)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(15);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
 
 
@@ -3647,7 +3859,7 @@ StepTitle.propTypes = {
 };
 
 /***/ }),
-/* 20 */
+/* 24 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3655,19 +3867,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ PasswordRecoveryStep2)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(11);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(13);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(17);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(3);
 /* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _PasswordRecoveryStep2Defaults_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(21);
+/* harmony import */ var _PasswordRecoveryStep2Defaults_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(25);
+/* harmony import */ var _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(8);
 
 
 
@@ -3678,6 +3891,7 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0,_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0,_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -3748,6 +3962,7 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
         underlined: this._isUnderlined(),
         canReveal: this._canReveal(),
         requireExistingPassword: false,
+        messageProps: this._getMessagProps(),
         titleProps: this._getTitleProps(),
         newPasswordProps: this._getNewPasswordProps(),
         confirmNewPasswordProps: this._getConfirmNewPasswordProps(),
@@ -3755,7 +3970,7 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
         backActionButtonProps: this._getBackActionButtonProps(),
         onPasswordChangeValuesChanged: this._handlePasswordChangeValuesChanged,
         onBackRequested: this._handleBackRequested,
-        onPasswordChangedRequested: this._handlePasswordChangeValuesChanged
+        onPasswordChangedRequested: this._handlePasswordChangedRequested
       });
     }
   }, {
@@ -3776,7 +3991,17 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "_canReveal",
     value: function _canReveal() {
-      return !!this.props.canReveal;
+      return this.props.hasOwnProperty('canReveal') ? !!this.props.canReveal : true;
+    }
+  }, {
+    key: "_getMessagProps",
+    value: function _getMessagProps() {
+      var messageProps = this.props.messageProps || {};
+      var messageType = (0,_PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_10__.passwordRecoveryBoxMessageTypePasswordChangeBoxMessageType)(messageProps.type || null);
+      return {
+        message: messageProps.message || null,
+        type: messageType
+      };
     }
   }, {
     key: "_getTitleProps",
@@ -3809,10 +4034,11 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
     key: "_getBackActionButtonProps",
     value: function _getBackActionButtonProps() {
       var backActionButtonProps = this.props.backActionButtonProps || {};
+      var backButtonPosition = backActionButtonProps.position || _PasswordRecoveryStep2Defaults_js__WEBPACK_IMPORTED_MODULE_9__.default.backActionButton.position;
       return {
         show: backActionButtonProps.hasOwnProperty('show') ? !!backActionButtonProps.show : true,
         label: backActionButtonProps.label || _PasswordRecoveryStep2Defaults_js__WEBPACK_IMPORTED_MODULE_9__.default.backActionButton.label,
-        position: backActionButtonProps.position || _PasswordRecoveryStep2Defaults_js__WEBPACK_IMPORTED_MODULE_9__.default.backActionButton.position
+        position: (0,_PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_10__.passwordRecoveryBoxBackButtonPositionToPasswordChangeBoxBackButtonPosition)(backButtonPosition)
       };
     }
   }]);
@@ -3827,6 +4053,7 @@ PasswordRecoveryStep2.propTypes = {
   style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   underlined: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
   canReveal: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
+  messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   titleProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   confirmNewPasswordProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   newPasswordProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
@@ -3840,7 +4067,7 @@ PasswordRecoveryStep2.propTypes = {
 };
 
 /***/ }),
-/* 21 */
+/* 25 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3848,8 +4075,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
-/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
 var PasswordRecoveryStep2Defaults = {
   title: 'Password Recovery - Set New Password',
@@ -3859,7 +4085,7 @@ var PasswordRecoveryStep2Defaults = {
   backActionButton: {
     show: true,
     label: 'Back to log-in',
-    position: lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_0__.BackButtonPositions.left
+    position: _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__.default.left
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PasswordRecoveryStep2Defaults);
@@ -3939,9 +4165,36 @@ var __webpack_exports__ = {};
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PasswordRecoveryBox": () => (/* reexport safe */ _PasswordRecoveryBox_jsx__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */   "PasswordCallbackRule": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.PasswordCallbackRule),
+/* harmony export */   "PasswordRegexRule": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.PasswordRegexRule),
+/* harmony export */   "PasswordEvaluator": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.PasswordEvaluator),
+/* harmony export */   "PasswordLengthRule": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.PasswordLengthRule),
+/* harmony export */   "PasswordStrengthIndicator": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.PasswordStrengthIndicator),
+/* harmony export */   "StrengthIndicatorStyles": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.StrengthIndicatorStyles),
+/* harmony export */   "PasswordStrengthLevels": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.PasswordStrengthLevels),
+/* harmony export */   "getAllAvailableLevels": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.getAllAvailableLevels),
+/* harmony export */   "getAvailableLevelCount": () => (/* reexport safe */ lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__.getAvailableLevelCount),
+/* harmony export */   "successMessage": () => (/* reexport safe */ _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.successMessage),
+/* harmony export */   "errorMessage": () => (/* reexport safe */ _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.errorMessage),
+/* harmony export */   "warningMessage": () => (/* reexport safe */ _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.warningMessage),
+/* harmony export */   "infoMessage": () => (/* reexport safe */ _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__.infoMessage),
+/* harmony export */   "BackButtonPositions": () => (/* reexport safe */ _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__.default),
+/* harmony export */   "PasswordRecoveryBoxMessageType": () => (/* reexport safe */ _PasswordRecoveryBoxMessageType_js__WEBPACK_IMPORTED_MODULE_1__.default),
+/* harmony export */   "PasswordRecoverySteps": () => (/* reexport safe */ _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_4__.default),
+/* harmony export */   "PasswordRecoveryBox": () => (/* reexport safe */ _PasswordRecoveryBox_jsx__WEBPACK_IMPORTED_MODULE_3__.default)
 /* harmony export */ });
-/* harmony import */ var _PasswordRecoveryBox_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _BackButtonPositions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _PasswordRecoveryBoxMessageType_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _PasswordRecoveryBoxUtility_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
+/* harmony import */ var _PasswordRecoveryBox_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+/* harmony import */ var _PasswordRecoverySteps_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(20);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3);
+/* harmony import */ var lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lvd_fluentui_passwordchangebox__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
 
 
 })();
