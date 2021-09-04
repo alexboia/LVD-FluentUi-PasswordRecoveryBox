@@ -30142,8 +30142,10 @@ var App = /*#__PURE__*/function (_React$Component) {
     _this._handlePasswordRecoveryBoxDisposed = _this._handlePasswordRecoveryBoxDisposed.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
     _this._handlePasswordRecoveryInitiationValuesChanged = _this._handlePasswordRecoveryInitiationValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
     _this._handlePasswordRecoveryInitiationRequested = _this._handlePasswordRecoveryInitiationRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handleBackFromPasswordRecoveryInitiationRequested = _this._handleBackFromPasswordRecoveryInitiationRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
     _this._handlePasswordChangeValuesChanged = _this._handlePasswordChangeValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
     _this._handlePasswordChangeRequested = _this._handlePasswordChangeRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
+    _this._handleBackFromPasswordChangeRequested = _this._handleBackFromPasswordChangeRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__.default)(_this));
     return _this;
   }
 
@@ -30179,6 +30181,13 @@ var App = /*#__PURE__*/function (_React$Component) {
         newPasswordStrengthLevel: null,
         newPasswordRules: []
       });
+    }
+  }, {
+    key: "_handleBackFromPasswordRecoveryInitiationRequested",
+    value: function _handleBackFromPasswordRecoveryInitiationRequested(values) {
+      this._log('Requested back navigation from password recovery step 1. Values are:');
+
+      this._log(values);
     }
   }, {
     key: "_handlePasswordRecoveryInitiationRequested",
@@ -30255,6 +30264,13 @@ var App = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "_handleBackFromPasswordChangeRequested",
+    value: function _handleBackFromPasswordChangeRequested(values) {
+      this._log('Requested back navigation from password recovery step 2. Values are:');
+
+      this._log(values);
+    }
+  }, {
     key: "_handlePasswordChangeRequested",
     value: function _handlePasswordChangeRequested(values) {
       this._log('Password change requested. Values are:');
@@ -30327,15 +30343,22 @@ var App = /*#__PURE__*/function (_React$Component) {
             passwordRulesProps: {
               rules: newPasswordRules
             },
+            placeholder: 'Enter new password, please',
             description: 'Yes, it must NOT be the same as your old one'
+          },
+          confirmNewPasswordProps: {
+            placeholder: 'Confirm new password, please',
+            description: 'Becasue, let us face it, we have all been there: all new password, but immediately forgotten!'
           }
         },
         onPasswordRecoveryBoxInitiatlized: this._handlePasswordRecoveryBoxInitialized,
         onPasswordRecoveryBoxDisposed: this._handlePasswordRecoveryBoxDisposed,
         onPasswordRecoveryInitiationValuesChanged: this._handlePasswordRecoveryInitiationValuesChanged,
         onPasswordRecoveryInitiationRequested: this._handlePasswordRecoveryInitiationRequested,
+        onBackFromPasswordRecoveryInitiationRequested: this._handleBackFromPasswordRecoveryInitiationRequested,
         onPasswordChangeValuesChanged: this._handlePasswordChangeValuesChanged,
-        onPasswordChangeRequested: this._handlePasswordChangeRequested
+        onPasswordChangeRequested: this._handlePasswordChangeRequested,
+        onBackFromPasswordChangeRequested: this._handleBackFromPasswordChangeRequested
       }));
     }
   }]);

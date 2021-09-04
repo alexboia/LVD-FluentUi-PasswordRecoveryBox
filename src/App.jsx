@@ -33,11 +33,15 @@ export default class App extends React.Component {
 			this._handlePasswordRecoveryInitiationValuesChanged.bind(this);
 		this._handlePasswordRecoveryInitiationRequested = 
 			this._handlePasswordRecoveryInitiationRequested.bind(this);
+		this._handleBackFromPasswordRecoveryInitiationRequested = 
+			this._handleBackFromPasswordRecoveryInitiationRequested.bind(this);
 
 		this._handlePasswordChangeValuesChanged =
 			this._handlePasswordChangeValuesChanged.bind(this);
 		this._handlePasswordChangeRequested = 
 			this._handlePasswordChangeRequested.bind(this);
+		this._handleBackFromPasswordChangeRequested =
+			this._handleBackFromPasswordChangeRequested.bind(this);
 	}
 
 	_handlePasswordRecoveryBoxInitialized() {
@@ -63,6 +67,11 @@ export default class App extends React.Component {
 			newPasswordStrengthLevel: null,
 			newPasswordRules: []
 		});
+	}
+
+	_handleBackFromPasswordRecoveryInitiationRequested(values) {
+		this._log('Requested back navigation from password recovery step 1. Values are:');
+		this._log(values);
 	}
 
 	_handlePasswordRecoveryInitiationRequested(values) {
@@ -119,6 +128,11 @@ export default class App extends React.Component {
 			newPasswordStrengthLevel: result.level,
 			newPasswordRules: result.rules
 		});
+	}
+
+	_handleBackFromPasswordChangeRequested(values) {
+		this._log('Requested back navigation from password recovery step 2. Values are:');
+		this._log(values);
 	}
 
 	_handlePasswordChangeRequested(values) {
@@ -188,7 +202,12 @@ export default class App extends React.Component {
 							passwordRulesProps: {
 								rules: newPasswordRules
 							},
+							placeholder: 'Enter new password, please',
 							description: 'Yes, it must NOT be the same as your old one'
+						},
+						confirmNewPasswordProps: {
+							placeholder: 'Confirm new password, please',
+							description: 'Becasue, let us face it, we have all been there: all new password, but immediately forgotten!'
 						}
 					}}
 
@@ -197,9 +216,11 @@ export default class App extends React.Component {
 
 					onPasswordRecoveryInitiationValuesChanged={this._handlePasswordRecoveryInitiationValuesChanged}
 					onPasswordRecoveryInitiationRequested={this._handlePasswordRecoveryInitiationRequested}
+					onBackFromPasswordRecoveryInitiationRequested={this._handleBackFromPasswordRecoveryInitiationRequested}
 
 					onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
 					onPasswordChangeRequested={this._handlePasswordChangeRequested}
+					onBackFromPasswordChangeRequested={this._handleBackFromPasswordChangeRequested}
 				/>
 			</div>
 		);
