@@ -36,8 +36,8 @@ export default class App extends React.Component {
 
 		this._handlePasswordChangeValuesChanged =
 			this._handlePasswordChangeValuesChanged.bind(this);
-		this._handlePasswordChangedRequested = 
-			this._handlePasswordChangedRequested.bind(this);
+		this._handlePasswordChangeRequested = 
+			this._handlePasswordChangeRequested.bind(this);
 	}
 
 	_handlePasswordRecoveryBoxInitialized() {
@@ -121,7 +121,7 @@ export default class App extends React.Component {
 		});
 	}
 
-	_handlePasswordChangedRequested(values) {
+	_handlePasswordChangeRequested(values) {
 		this._log('Password change requested. Values are:');
 		this._log(values);
 		this._changePassword(values);
@@ -193,7 +193,7 @@ export default class App extends React.Component {
 					onPasswordRecoveryInitiationRequested={this._handlePasswordRecoveryInitiationRequested}
 
 					onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
-					onPasswordChangedRequested={this._handlePasswordChangedRequested}
+					onPasswordChangeRequested={this._handlePasswordChangeRequested}
 				/>
 			</div>
 		);

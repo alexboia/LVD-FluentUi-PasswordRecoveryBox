@@ -79,15 +79,15 @@ class PasswordRecoveryBoxStep2SamplePage extends React.Component {
 
 		this._handlePasswordChangeValuesChanged = 
 			this._handlePasswordChangeValuesChanged.bind(this);
-		this._handlePasswordChangedRequested = 
-			this._handlePasswordChangedRequested.bind(this);
+		this._handlePasswordChangeRequested = 
+			this._handlePasswordChangeRequested.bind(this);
 	}
 
 	_handlePasswordChangeValuesChanged(oldValues, newValues) {
 		//do something, if desired
 	}
 
-	_handlePasswordChangedRequested(values) {
+	_handlePasswordChangeRequested(values) {
 		//validate and change new password
 	}
 
@@ -97,7 +97,7 @@ class PasswordRecoveryBoxStep2SamplePage extends React.Component {
 				step={PasswordRecoverySteps.EnterNewPassword}
 				messageProps={/* use this to display a message after processing */}
 				onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
-				onPasswordChangedRequested={this._handlePasswordChangedRequested}
+				onPasswordChangeRequested={this._handlePasswordChangeRequested}
 			/>
 		);
 	}
@@ -170,14 +170,24 @@ The user identification values are exported as a plain javascript object with th
 | --- | --- | --- |
 | `userIdentifier` | `string` | - |
 
+### Password Change Values Object
+<a name="c-password-values"></a>
+
+Same as [here](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox#password-change-values-object).
+
 ## Events
 <a name="c-events"></a>
 
 | Event | Prop Name | Arguments | Notes |
 | --- | --- | --- | --- |
-| User identfication values changed - Step 1 | `onPasswordRecoveryInitiationValuesChanged` | (`oldValues`:`User Identification Values Object`, `newValues`:`User Identification Values Object`) | Triggered whenerver any of fields from step 1 changes. |
+| User identfication values changed - Step 1 | `onPasswordRecoveryInitiationValuesChanged` | (`oldValues`:`User Identification Values Object`, `newValues`:`User Identification Values Object`) | Triggered whenerver any of fields from Step 1 changes. |
 | Password recovery initation requested - Step 1 | `onPasswordRecoveryInitiationRequested` | (`User Identification Values Object`) | Trigered whenever the `Recovery my password` button is clicked |
 | Navigate back from Step 1 | `onBackFromPasswordRecoveryInitiationRequested` | (`User Identification Values Object`) | Triggered whenever the `Back` button is clicked when Step 1 is active. |
+| Password change values changed - Step 2 | `onPasswordChangeValuesChanged` | (`oldValues`:`Password Change Values Object`, `newValues`:`Password Change Values Object`) | Triggered whenever any of the values from Step 2 changes. |
+| Password change requested - Step 2 | `onPasswordChangeRequested` | (`Password Change Values Object`) | Triggered whenever the `Change my password` button is clicked |
+| Navigate back from Step 2 | `onBackFromPasswordChangeRequested` | (`Password Change Values Object`) | Triggered whenever the `Back` button is clicked when Step 2 is active. |
+| Component initialized | `onPasswordRecoveryBoxInitiatlized` | (`none`) | Triggered when the component is mounted by `React`. |
+| Component disposed | `onPasswordRecoveryBoxDisposed` | (`none`) | Triggered when the component is un-mounted by `React`. |
 
 ## Changelog
 <a name="c-changelog"></a>

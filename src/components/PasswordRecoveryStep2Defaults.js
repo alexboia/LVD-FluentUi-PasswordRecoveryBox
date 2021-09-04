@@ -4,7 +4,7 @@ const PasswordRecoveryStep2Defaults = {
 	title: 'Password Recovery - Set New Password',
 
 	passwordChangeButton: {
-		label: 'Recover my password'
+		label: 'Change my password'
 	},
 
 	backActionButton: {

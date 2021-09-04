@@ -67,8 +67,8 @@ export default class PasswordRecoveryBox extends React.Component {
 	}
 
 	_handlePasswordChangedRequested(values) {
-		if (this.props.onPasswordChangedRequested != null) {
-			this.props.onPasswordChangedRequested(values);
+		if (this.props.onPasswordChangeRequested != null) {
+			this.props.onPasswordChangeRequested(values);
 		}
 	}
 	
@@ -185,7 +185,7 @@ export default class PasswordRecoveryBox extends React.Component {
 		return (
 			<PasswordRecoveryStep2 
 				{...step2Props} 
-				onPasswordChangedRequested={this._handlePasswordChangedRequested}
+				onPasswordChangeRequested={this._handlePasswordChangedRequested}
 				onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
 				onBackRequested={this._handleBackFromPasswordChangeRequested}
 			/>
@@ -216,7 +216,7 @@ PasswordRecoveryBox.propTypes = {
 	onPasswordRecoveryInitiationValuesChanged: PropTypes.func,
 	onBackFromPasswordRecoveryInitiationRequested: PropTypes.func,
 	
-	onPasswordChangedRequested: PropTypes.func,
+	onPasswordChangeRequested: PropTypes.func,
 	onPasswordChangeValuesChanged: PropTypes.func,
 	onBackFromPasswordChangeRequested: PropTypes.func,
 	
