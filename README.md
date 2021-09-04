@@ -169,7 +169,7 @@ For convenience, the following API artefacts are forwarded from the underlying p
 | Make component readonly | `readOnly` | `boolean` | Cascades to all fields. Defaults to `false`. Can be overridden at step level. |
 | Display fields in underlined style. | `underlined` | `boolean` | Defaults to `false`. Can be overridden at step level. |
 | Message | `messageProps` | `Message Object` | See below. By default no message is shown. |
-| Current step | `step` | `PasswordRecoverySteps` | What is the currently active step. Defaults to `PasswordRecoverySteps.CollectUserIdentifier`, which is the first step. See below for available values. |
+| Current step | `step` | `PasswordRecoverySteps` | What is the currently active step. Defaults to `PasswordRecoverySteps`.`CollectUserIdentifier`, which is the first step. See below for available values. |
 | Customize the first step | `step1Props` | `User Identification Customization Object` | See below.  |
 | Customize the second step | `step2Props` | `Password Change Box Customization Object` | All the properties supported by the underlying [password change box](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox), with the exception of `framed`, `centered` and `fixed`, which are set to false. See here for [default values provided by this component](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/components/PasswordRecoveryStep2Defaults.js). |
 | Customize the back button | `backActionButtonProps` | `Back Button Customization Object` | Can be used to customize the back button for both steps. Can be overridden at step level. See below. |
