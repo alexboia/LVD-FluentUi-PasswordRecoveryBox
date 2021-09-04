@@ -170,7 +170,13 @@ export default class App extends React.Component {
 						position: BackButtonPositions.right
 					}}
 
-					step1Props={{}}
+					step1Props={{
+						className: 'x-class-step1',
+						userIdentifierProps: {
+							label: 'We need your e-mail',
+							description: 'You will receive a password recovery link and further instructions to this e-mail, if valid.'
+						}
+					}}
 
 					step2Props={{
 						newPasswordProps: {

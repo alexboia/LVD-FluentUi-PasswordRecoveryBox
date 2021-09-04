@@ -170,8 +170,8 @@ For convenience, the following API artefacts are forwarded from the underlying p
 | Display fields in underlined style. | `underlined` | `boolean` | Defaults to `false`. Can be overridden at step level. |
 | Message | `messageProps` | `Message Object` | See below. By default no message is shown. |
 | Current step | `step` | `PasswordRecoverySteps` | What is the currently active step. Defaults to `PasswordRecoverySteps.CollectUserIdentifier`, which is the first step. See below for available values. |
-| Customize the first step | `step1Props` | | |
-| Customize the second step | `step2Props` | `Password Change Box Customization Options Props` | All the properties supported by the underlying [password change box](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox), with the exception of `framed`, `centered` and `fixed`, which are set to false. |
+| Customize the first step | `step1Props` | `User Identification Customization Object` | See below.  |
+| Customize the second step | `step2Props` | `Password Change Box Customization Object` | All the properties supported by the underlying [password change box](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox), with the exception of `framed`, `centered` and `fixed`, which are set to false. |
 | Customize the back button | `backActionButtonProps` | `Back Button Customization Object` | Can be used to customize the back button for both steps. Can be overridden at step level. See below. |
 
 ### Message Object
@@ -205,13 +205,80 @@ The following [steps are available](https://github.com/alexboia/LVD-FluentUi-Pas
 | Collect user identification data | `PasswordRecoverySteps.CollectUserIdentifier` | First step |
 | Collect new user password information data | `PasswordRecoverySteps.EnterNewPassword` | Second step |
 
+Example:
+
+```javascript
+<PasswordRecoveryBox 
+	...
+	step={PasswordRecoverySteps.EnterNewPassword}
+	...
+/>
+```
+
+### User Identification Customization Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `className` | `string` | Set additional container class name. Defaults to `null`. |
+| `style` | `object` | Set additional container inline css style properties. Key-value plain javascript object. Defaults to `{}`. |
+| `userIdentifierProps` | `User Identifier Customization Object` | Configure user identifier field. See below. |
+| `titleProps` | `Title Customization Object` | Configure title. See below. Title defaults to `Password recovery - Identify yourself`. |
+| `passwordRecoveryInitiationButtonProps` | `Password Recovery Initiation Button Configuration Object` | Configure the password recovery initiation button. See below.  |
+| `backActionButtonProps` | `Back Button Customization Object` | Configure the back button. See below. |
+
+Example:
+
+```javascript
+<PasswordRecoveryBox 
+	...
+	step1Props={{
+		className: 'x-class-step1',
+		userIdentifierProps: {
+			label: 'We need your e-mail',
+			description: 'You will receive a password recovery link and further instructions to this e-mail, if valid.'
+		}
+	}}
+	...
+/>
+```
+
+### User Identifier Customization Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `label` | `string` | Field label. Defaults to `E-mail address:`. |
+| `placeholder` | `string` | Field placeholder. Defaults to `Please fill in your e-mail address`. |
+| `description` | `string` | Field descriptive text, displayed below the field. Defaults to empty string. |
+| `emptyErrorMessage` | `string` | Error message displayed when the field is left empty. Defaults to `You must fill in your e-mail address`. |
+
+### Title Customization Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `show` | `boolean` | Defaults to `true` if not specified.  |
+| `text` | `string` | Defaults depending on the current step if not specified or empty.  |
+
+### Password Recovery Initiation Button Configuration Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `label` | `string` | Defaults to `Recover my password`. |
+
 ### Back Button Customization Object
 
 A plain javascript object with the following properties:
 
 | Name | Type | Notes |
 | --- | --- | --- |
-| `label` | `string` | Defaults to `Change password`. |
+| `label` | `string` | Defaults to `Back to log-in` for both steps. |
 | `show` | `boolean` | Whether to show the button or not. Defaults to `true`. |
 | `position` | `BackButtonPositions` | Defaults to `BackButtonPositions.left`. See [here for all supported values](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/components/BackButtonPositions.js). |
 

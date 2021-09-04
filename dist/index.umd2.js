@@ -3033,8 +3033,8 @@ var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "_handlePasswordChangedRequested",
     value: function _handlePasswordChangedRequested(values) {
-      if (this.props.onPasswordChangedRequested != null) {
-        this.props.onPasswordChangedRequested(values);
+      if (this.props.onPasswordChangeRequested != null) {
+        this.props.onPasswordChangeRequested(values);
       }
     }
   }, {
@@ -3133,6 +3133,8 @@ var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
     value: function _getCommonProps() {
       return {
         disabled: this._isDisabled(),
+        underlined: this._isUnderlined(),
+        readOnly: this._isReadOnly(),
         messageProps: this._getMessageProps(),
         backActionButtonProps: this._getBackActionButtonProps()
       };
@@ -3141,6 +3143,16 @@ var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
     key: "_isDisabled",
     value: function _isDisabled() {
       return !!this.props.disabled;
+    }
+  }, {
+    key: "_isUnderlined",
+    value: function _isUnderlined() {
+      return !!this.props.underlined;
+    }
+  }, {
+    key: "_isReadOnly",
+    value: function _isReadOnly() {
+      return !!this.props.readOnly;
     }
   }, {
     key: "_getMessageProps",
@@ -3158,7 +3170,7 @@ var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
       var step2Props = this._getStep2Props();
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_PasswordRecoveryStep2_jsx__WEBPACK_IMPORTED_MODULE_11__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, step2Props, {
-        onPasswordChangedRequested: this._handlePasswordChangedRequested,
+        onPasswordChangeRequested: this._handlePasswordChangedRequested,
         onPasswordChangeValuesChanged: this._handlePasswordChangeValuesChanged,
         onBackRequested: this._handleBackFromPasswordChangeRequested
       }));
@@ -3176,9 +3188,14 @@ var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
 
 
 PasswordRecoveryBox.propTypes = {
+  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+  readOnly: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+  underlined: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+  framed: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+  centered: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+  fixed: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
   className: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
   style: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
-  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
   step: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
   messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
   step1Props: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
@@ -3187,7 +3204,7 @@ PasswordRecoveryBox.propTypes = {
   onPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onPasswordRecoveryInitiationValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onBackFromPasswordRecoveryInitiationRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordChangedRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordChangeRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onPasswordChangeValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onBackFromPasswordChangeRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onPasswordRecoveryBoxInitiatlized: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
@@ -3549,7 +3566,7 @@ var PasswordRecoveryStep1 = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
-        className: "lvd-passwordrecovery-step1",
+        className: this._computeContainerCssClassName(),
         style: this._getStyle()
       }, this._renderTitle(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
         className: "lvd-passwordrecovery-box-fields-container"
@@ -3558,6 +3575,24 @@ var PasswordRecoveryStep1 = /*#__PURE__*/function (_React$Component) {
       }, this._renderPasswordRecoveryInitiationActionButton(), this._renderBackActionButtonButton(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default().createElement("div", {
         className: "lvd-passwordrecovery-box-clear"
       })));
+    }
+  }, {
+    key: "_computeContainerCssClassName",
+    value: function _computeContainerCssClassName() {
+      var containerClassName = ['lvd-passwordrecovery-step1'];
+
+      var className = this._getClassName();
+
+      if (!!className) {
+        containerClassName.push(className);
+      }
+
+      return containerClassName.join(' ');
+    }
+  }, {
+    key: "_getClassName",
+    value: function _getClassName() {
+      return this.props.className || null;
     }
   }, {
     key: "_getStyle",
@@ -3742,8 +3777,9 @@ var PasswordRecoveryStep1 = /*#__PURE__*/function (_React$Component) {
 PasswordRecoveryStep1.propTypes = {
   disabled: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
   readOnly: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-  style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   underlined: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string),
+  style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   titleProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   userIdentifierProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
@@ -3961,6 +3997,8 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
         readOnly: this._isReadOnly(),
         underlined: this._isUnderlined(),
         canReveal: this._canReveal(),
+        className: this._getClassName(),
+        style: this._getStyle(),
         requireExistingPassword: false,
         messageProps: this._getMessagProps(),
         titleProps: this._getTitleProps(),
@@ -3992,6 +4030,16 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
     key: "_canReveal",
     value: function _canReveal() {
       return this.props.hasOwnProperty('canReveal') ? !!this.props.canReveal : true;
+    }
+  }, {
+    key: "_getClassName",
+    value: function _getClassName() {
+      return this.props.className || null;
+    }
+  }, {
+    key: "_getStyle",
+    value: function _getStyle() {
+      return this.props.style || {};
     }
   }, {
     key: "_getMessagProps",
@@ -4050,9 +4098,10 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
 PasswordRecoveryStep2.propTypes = {
   disabled: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
   readOnly: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-  style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   underlined: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
   canReveal: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string),
+  style: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   messageProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   titleProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
   confirmNewPasswordProps: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().object),
@@ -4080,7 +4129,7 @@ __webpack_require__.r(__webpack_exports__);
 var PasswordRecoveryStep2Defaults = {
   title: 'Password Recovery - Set New Password',
   passwordChangeButton: {
-    label: 'Recover my password'
+    label: 'Change my password'
   },
   backActionButton: {
     show: true,
