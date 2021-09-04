@@ -61,6 +61,8 @@ export default class PasswordRecoveryStep2 extends React.Component {
 				readOnly={this._isReadOnly()}
 				underlined={this._isUnderlined()}
 				canReveal={this._canReveal()}
+				className={this._getClassName()}
+				style={this._getStyle()}
 				requireExistingPassword={false}
 				messageProps={this._getMessagProps()}
 				titleProps={this._getTitleProps()}
@@ -91,6 +93,14 @@ export default class PasswordRecoveryStep2 extends React.Component {
 		return this.props.hasOwnProperty('canReveal')
 			? !!this.props.canReveal
 			: true;
+	}
+
+	_getClassName() {
+		return this.props.className || null;
+	}
+
+	_getStyle() {
+		return this.props.style || {};
 	}
 
 	_getMessagProps() {
@@ -150,13 +160,15 @@ export default class PasswordRecoveryStep2 extends React.Component {
 PasswordRecoveryStep2.propTypes = {
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
-	style: PropTypes.object,
 	underlined: PropTypes.bool,
 	canReveal: PropTypes.bool,
 
-	messageProps: PropTypes.object,
+	className: PropTypes.string,
+	style: PropTypes.object,
 
+	messageProps: PropTypes.object,
 	titleProps: PropTypes.object,
+	
 	confirmNewPasswordProps: PropTypes.object,
 	newPasswordProps: PropTypes.object,
 	passwordChangeButtonProps: PropTypes.object,

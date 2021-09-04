@@ -160,6 +160,37 @@ For convenience, the following API artefacts are forwarded from the underlying p
 
 | What | Prop Name | Type | Notes |
 | --- | --- | --- | --- |
+| Disable component | `disabled` | `boolean` | Cascades to all fields and buttons. Defaults to `false`. |
+| Configure whether to use framed container layout or not | `framed` | `boolean` | If true, it will display the default shadow-box frame. Defaults to `true`. |
+| Configure whether to use built-in fixed-width container layout or not | `fixed` | `boolean` | If true, it will set the container width to the default width of `500px`. Defaults to `true`. |
+| Configure whether to center the container or not | `centered` | `boolean` | If true, it will attempt to center the container. Defaults to `true`. |
+| Set additional master container css class name | `className` | `string` | Defaults to `null`. |
+| Set additional master inline css style properties | `style` | `object` | Key-value plain javascript object. Defaults to `{}`. |
+| Make component readonly | `readOnly` | `boolean` | Cascades to all fields. Defaults to `false`. Can be overridden at step level. |
+| Display fields in underlined style. | `underlined` | `boolean` | Defaults to `false`. Can be overridden at step level. |
+| Message | `messageProps` | `Message Object` | See below. By default no message is shown. Can be overridden at step level. |
+
+### Message Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `message` | `string` | The actual message to be displayed. Defaults to `null` if not specified.  |
+| `type` | `PasswordRecoveryBoxMessageType` | Type of message - used for formatting (error, warning etc.). Defaults to `null` if not specified. See [here for all supported values](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/components/PasswordRecoveryBoxMessageType.js). |
+
+Example:
+
+```javascript
+<PasswordChangeBox 
+	...
+	messageProps={{
+		message: "The existing password you entered was invalid",
+		type: PasswordChangeBoxMessageType.error
+	}}
+	...
+/>
+```
 
 ## User Identification Values Object
 <a name="c-userid-values"></a>

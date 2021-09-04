@@ -163,6 +163,8 @@ export default class PasswordRecoveryBox extends React.Component {
 	_getCommonProps() {
 		return {
 			disabled: this._isDisabled(),
+			underlined: this._isUnderlined(),
+			readOnly: this._isReadOnly(),
 			messageProps: this._getMessageProps(),
 			backActionButtonProps: this._getBackActionButtonProps()
 		};
@@ -170,6 +172,14 @@ export default class PasswordRecoveryBox extends React.Component {
 
 	_isDisabled() {
 		return !!this.props.disabled;
+	}
+
+	_isUnderlined() {
+		return !!this.props.underlined;
+	}
+
+	_isReadOnly() {
+		return !!this.props.readOnly;
 	}
 
 	_getMessageProps() {
@@ -200,9 +210,16 @@ export default class PasswordRecoveryBox extends React.Component {
 }
 
 PasswordRecoveryBox.propTypes = {
+	disabled: PropTypes.bool,
+	readOnly: PropTypes.bool,
+	underlined: PropTypes.bool,
+
+	framed: PropTypes.bool,
+	centered: PropTypes.bool,
+	fixed: PropTypes.bool,
+
 	className: PropTypes.string,
 	style: PropTypes.object,
-	disabled: PropTypes.bool,
 	step: PropTypes.string,
 
 	messageProps: PropTypes.object,

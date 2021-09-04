@@ -91,7 +91,7 @@ export default class PasswordRecoveryStep1 extends React.Component {
 
 	render() {
 		return (
-			<div className="lvd-passwordrecovery-step1" style={this._getStyle()}>
+			<div className={this._computeContainerCssClassName()} style={this._getStyle()}>
 				{this._renderTitle()}
 
 				<div className="lvd-passwordrecovery-box-fields-container">
@@ -106,6 +106,21 @@ export default class PasswordRecoveryStep1 extends React.Component {
 				</div>
 			</div>
 		);
+	}
+
+	_computeContainerCssClassName() {
+		let containerClassName = ['lvd-passwordrecovery-step1'];
+
+		const className = this._getClassName();
+		if (!!className) {
+			containerClassName.push(className);
+		}
+
+		return containerClassName.join(' ');
+	}
+
+	_getClassName() {
+		return this.props.className || null;
 	}
 
 	_getStyle() {
@@ -289,12 +304,14 @@ export default class PasswordRecoveryStep1 extends React.Component {
 PasswordRecoveryStep1.propTypes = {
 	disabled: PropTypes.bool,
 	readOnly: PropTypes.bool,
-	style: PropTypes.object,
 	underlined: PropTypes.bool,
 
-	messageProps: PropTypes.object,
+	className: PropTypes.string,
+	style: PropTypes.object,
 
+	messageProps: PropTypes.object,
 	titleProps: PropTypes.object,
+
 	userIdentifierProps: PropTypes.object,
 	passwordRecoveryInitiationButtonProps: PropTypes.object,
 	backActionButtonProps: PropTypes.object,
