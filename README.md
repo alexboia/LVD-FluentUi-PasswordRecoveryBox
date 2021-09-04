@@ -115,7 +115,7 @@ You can either directly include the `dist/style.css` into your `html` web page o
 @import '~lvd-fluentui-passwordrecoverybox/dist/style.css';
 ```
 
-Also see [the component itself]().
+Also see [the component itself](https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox/blob/main/src/components/PasswordRecoveryBox.jsx).
 
 
 ## Building
@@ -141,7 +141,7 @@ npm run build
 
 ## Forwarded APIs
 
-For convenience, the following API artefacts are forwarded from the underlying password change box component (which itself, forwards them from the underyling (password box component)[https://github.com/alexboia/LVD-FluentUi-PasswordBox]):
+For convenience, the following API artefacts are forwarded from the underlying password change box component (which itself, forwards them from the underyling [password box component](https://github.com/alexboia/LVD-FluentUi-PasswordBox)):
 
 - `PasswordCallbackRule`,
 - `PasswordRegexRule`,
