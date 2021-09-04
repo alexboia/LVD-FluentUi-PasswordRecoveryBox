@@ -170,6 +170,7 @@ For convenience, the following API artefacts are forwarded from the underlying p
 | Display fields in underlined style. | `underlined` | `boolean` | Defaults to `false`. Can be overridden at step level. |
 | Message | `messageProps` | `Message Object` | See below. By default no message is shown. |
 | Current step | `step` | `PasswordRecoverySteps` | What is the currently active step. Defaults to `PasswordRecoverySteps.CollectUserIdentifier`, which is the first step. See below for available values. |
+| Customize the back button | `backActionButtonProps` | `Back Button Customization Object` | Can be used to customize the back button for both steps. Can be overridden at step level. See below. |
 
 ### Message Object
 
@@ -183,11 +184,11 @@ A plain javascript object with the following properties:
 Example:
 
 ```javascript
-<PasswordChangeBox 
+<PasswordRecoveryBox 
 	...
 	messageProps={{
 		message: "The existing password you entered was invalid",
-		type: PasswordChangeBoxMessageType.error
+		type: PasswordRecoveryBoxMessageType.error
 	}}
 	...
 />
@@ -201,6 +202,32 @@ The following [steps are available](https://github.com/alexboia/LVD-FluentUi-Pas
 | --- | --- | --- |
 | Collect user identification data | `PasswordRecoverySteps.CollectUserIdentifier` | First step |
 | Collect new user password information data | `PasswordRecoverySteps.EnterNewPassword` | Second step |
+
+### Back Button Customization Object
+
+A plain javascript object with the following properties:
+
+| Name | Type | Notes |
+| --- | --- | --- |
+| `label` | `string` | Defaults to `Change password`. |
+| `show` | `boolean` | Whether to show the button or not. Defaults to `true`. |
+| `position` | `BackButtonPositions` | Defaults to `BackButtonPositions.left`. |
+
+Example:
+
+```javascript
+<PasswordRecoveryBox 
+	...
+	backActionButtonProps={{
+		label: 'Back to log-in',
+		show: true,
+		//align back button to the far-right of the container
+		position: BackButtonPositions.right 
+	}}
+	...
+/>
+```
+
 
 ## User Identification Values Object
 <a name="c-userid-values"></a>
