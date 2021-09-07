@@ -30326,6 +30326,10 @@ var App = /*#__PURE__*/function (_React$Component) {
           label: 'Back to login',
           position: _components_Index_js__WEBPACK_IMPORTED_MODULE_12__.BackButtonPositions.right
         },
+        fixed: false,
+        centered: false,
+        framed: true,
+        underlined: true,
         step1Props: {
           className: 'x-class-step1',
           userIdentifierProps: {
@@ -30334,6 +30338,8 @@ var App = /*#__PURE__*/function (_React$Component) {
           }
         },
         step2Props: {
+          canReveal: false,
+          className: "x-step2-change-password",
           newPasswordProps: {
             passwordStrengthProps: {
               style: _components_Index_js__WEBPACK_IMPORTED_MODULE_12__.StrengthIndicatorStyles.intermittentBar,

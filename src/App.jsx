@@ -184,6 +184,11 @@ export default class App extends React.Component {
 						position: BackButtonPositions.right
 					}}
 
+					fixed={false}
+					centered={false}
+					framed={true}
+					underlined={true}
+
 					step1Props={{
 						className: 'x-class-step1',
 						userIdentifierProps: {
@@ -193,6 +198,8 @@ export default class App extends React.Component {
 					}}
 
 					step2Props={{
+						canReveal: false,
+						className: "x-step2-change-password",
 						newPasswordProps: {
 							passwordStrengthProps: {	
 								style: StrengthIndicatorStyles.intermittentBar,
