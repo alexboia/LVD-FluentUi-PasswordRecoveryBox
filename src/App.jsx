@@ -1,9 +1,10 @@
 import React from 'react';
 import PasswordRecoveryBox from './components/PasswordRecoveryBox.jsx';
+import PasswordRecoverySteps from './components/PasswordRecoverySteps.js';
 
 import { evaluatePassword } from './PasswordEvaluation.js';
 import FakePasswordRecoveryService from './FakePasswordRecoveryService.js';
-import PasswordRecoverySteps from './components/PasswordRecoverySteps.js';
+
 import { 
 	BackButtonPositions,
 	PasswordRecoveryBoxMessageType, 
