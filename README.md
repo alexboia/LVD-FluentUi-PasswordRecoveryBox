@@ -1,5 +1,7 @@
 # LVD-FluentUi-PasswordRecoveryBox
 
+[![NPM](https://nodei.co/npm/lvd-fluentui-passwordrecoverybox.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/lvd-fluentui-passwordrecoverybox/)
+
 A ReactJS password recovery box built using the [FluentUI library](https://github.com/microsoft/fluentui), comprised of two steps:
 
 - password identification step - user provides some sort of identification to kick of the process;
