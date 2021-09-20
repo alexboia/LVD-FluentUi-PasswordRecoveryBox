@@ -17,8 +17,8 @@ export default class PasswordRecoveryStep2 extends React.Component {
 			this._handlePasswordChangeValuesChanged.bind(this);
 		this._handleBackRequested = 
 			this._handleBackRequested.bind(this);
-		this._handlePasswordChangedRequested = 
-			this._handlePasswordChangedRequested.bind(this);
+		this._handlePasswordChangeRequested = 
+			this._handlePasswordChangeRequested.bind(this);
 	}
 
 	componentDidMount() {
@@ -45,9 +45,9 @@ export default class PasswordRecoveryStep2 extends React.Component {
 		}
 	}
 
-	_handlePasswordChangedRequested(values) {
-		if (this.props.onPasswordChangedRequested != null) {
-			this.props.onPasswordChangedRequested(values);
+	_handlePasswordChangeRequested(values) {
+		if (this.props.onPasswordChangeRequested != null) {
+			this.props.onPasswordChangeRequested(values);
 		}
 	}
 
@@ -72,7 +72,7 @@ export default class PasswordRecoveryStep2 extends React.Component {
 				backActionButtonProps={this._getBackActionButtonProps()}
 				onPasswordChangeValuesChanged={this._handlePasswordChangeValuesChanged}
 				onBackRequested={this._handleBackRequested}
-				onPasswordChangedRequested={this._handlePasswordChangedRequested}
+				onPasswordChangedRequested={this._handlePasswordChangeRequested}
 			/>
 		);
 	}

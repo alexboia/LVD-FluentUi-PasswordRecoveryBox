@@ -219,7 +219,7 @@ export default class App extends React.Component {
 						}
 					}}
 
-					onPasswordRecoveryBoxInitiatlized={this._handlePasswordRecoveryBoxInitialized}
+					onPasswordRecoveryBoxInitialized={this._handlePasswordRecoveryBoxInitialized}
 					onPasswordRecoveryBoxDisposed={this._handlePasswordRecoveryBoxDisposed}
 
 					onPasswordRecoveryInitiationValuesChanged={this._handlePasswordRecoveryInitiationValuesChanged}

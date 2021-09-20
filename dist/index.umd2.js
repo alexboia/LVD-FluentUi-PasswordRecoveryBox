@@ -2984,8 +2984,8 @@ var PasswordRecoveryBox = /*#__PURE__*/function (_React$Component) {
   (0,_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__.default)(PasswordRecoveryBox, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      if (this.props.onPasswordRecoveryBoxInitiatlized != null) {
-        this.props.onPasswordRecoveryBoxInitiatlized();
+      if (this.props.onPasswordRecoveryBoxInitialized != null) {
+        this.props.onPasswordRecoveryBoxInitialized();
       }
     }
   }, {
@@ -3207,7 +3207,7 @@ PasswordRecoveryBox.propTypes = {
   onPasswordChangeRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onPasswordChangeValuesChanged: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onBackFromPasswordChangeRequested: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
-  onPasswordRecoveryBoxInitiatlized: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+  onPasswordRecoveryBoxInitialized: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
   onPasswordRecoveryBoxDisposed: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func)
 };
 
@@ -3947,7 +3947,7 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this._handlePasswordChangeValuesChanged = _this._handlePasswordChangeValuesChanged.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
     _this._handleBackRequested = _this._handleBackRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
-    _this._handlePasswordChangedRequested = _this._handlePasswordChangedRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
+    _this._handlePasswordChangeRequested = _this._handlePasswordChangeRequested.bind((0,_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this));
     return _this;
   }
 
@@ -3980,10 +3980,10 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
       }
     }
   }, {
-    key: "_handlePasswordChangedRequested",
-    value: function _handlePasswordChangedRequested(values) {
-      if (this.props.onPasswordChangedRequested != null) {
-        this.props.onPasswordChangedRequested(values);
+    key: "_handlePasswordChangeRequested",
+    value: function _handlePasswordChangeRequested(values) {
+      if (this.props.onPasswordChangeRequested != null) {
+        this.props.onPasswordChangeRequested(values);
       }
     }
   }, {
@@ -4008,7 +4008,7 @@ var PasswordRecoveryStep2 = /*#__PURE__*/function (_React$Component) {
         backActionButtonProps: this._getBackActionButtonProps(),
         onPasswordChangeValuesChanged: this._handlePasswordChangeValuesChanged,
         onBackRequested: this._handleBackRequested,
-        onPasswordChangedRequested: this._handlePasswordChangedRequested
+        onPasswordChangedRequested: this._handlePasswordChangeRequested
       });
     }
   }, {
