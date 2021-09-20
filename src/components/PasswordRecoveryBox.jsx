@@ -25,8 +25,8 @@ export default class PasswordRecoveryBox extends React.Component {
 	}
 
 	componentDidMount() {
-		if (this.props.onPasswordRecoveryBoxInitiatlized != null) {
-			this.props.onPasswordRecoveryBoxInitiatlized();
+		if (this.props.onPasswordRecoveryBoxInitialized != null) {
+			this.props.onPasswordRecoveryBoxInitialized();
 		}
 	}
 
@@ -237,6 +237,6 @@ PasswordRecoveryBox.propTypes = {
 	onPasswordChangeValuesChanged: PropTypes.func,
 	onBackFromPasswordChangeRequested: PropTypes.func,
 	
-	onPasswordRecoveryBoxInitiatlized: PropTypes.func,
+	onPasswordRecoveryBoxInitialized: PropTypes.func,
 	onPasswordRecoveryBoxDisposed: PropTypes.func
 };

@@ -1,6 +1,6 @@
 {
 	"name": "lvd-fluentui-passwordrecoverybox",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A ReactJS password recovery box component built using the FluentUI library",
 	"homepage": "https://github.com/alexboia/LVD-FluentUi-PasswordRecoveryBox",
 	"repository": {
@@ -21,6 +21,8 @@
 		"fluent-ui"
 	],
 	"main": "dist/index.umd2.js",
+	"types": "dist/index.d.ts",
+	"typings": "dist/index.d.ts",
 	"scripts": {
 		"build-app": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-app.ps1",
 		"build-dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./build-dist.ps1",
@@ -58,6 +60,6 @@
 		"office-ui-fabric-core": "^11.0.0",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.2",
-		"lvd-fluentui-passwordchangebox": "^0.0.4"
+		"lvd-fluentui-passwordchangebox": "^0.0.6"
 	}
 }

@@ -328,11 +328,16 @@ Same as [here](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox#passwo
 | Password change values changed - Step 2 | `onPasswordChangeValuesChanged` | (`oldValues`:`Password Change Values Object`, `newValues`:`Password Change Values Object`) | Triggered whenever any of the values from Step 2 changes. |
 | Password change requested - Step 2 | `onPasswordChangeRequested` | (`Password Change Values Object`) | Triggered whenever the `Change my password` button is clicked |
 | Navigate back from Step 2 | `onBackFromPasswordChangeRequested` | (`Password Change Values Object`) | Triggered whenever the `Back` button is clicked when Step 2 is active. |
-| Component initialized | `onPasswordRecoveryBoxInitiatlized` | (`none`) | Triggered when the component is mounted by `React`. |
+| Component initialized | `onPasswordRecoveryBoxInitialized` | (`none`) | Triggered when the component is mounted by `React`. |
 | Component disposed | `onPasswordRecoveryBoxDisposed` | (`none`) | Triggered when the component is un-mounted by `React`. |
 
 ## Changelog
 <a name="c-changelog"></a>
+
+### Version 0.0.2
+
+- Added type definitions;
+- Fixed type - Renamed `onPasswordRecoveryBoxInitiatlized` to `onPasswordRecoveryBoxInitialized`.
 
 ### Version 0.0.1
 
