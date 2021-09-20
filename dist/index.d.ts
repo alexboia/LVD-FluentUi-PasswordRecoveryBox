@@ -48,12 +48,12 @@ export enum PasswordRecoveryBoxMessageType {
 	severeWarning = PasswordChangeBoxMessageType.severeWarning,
 	success = PasswordChangeBoxMessageType.success,
 	warning = PasswordChangeBoxMessageType.warning
-};
+}
 
 export enum BackButtonPositions {
 	left = PasswordChangeBoxBackButtonPositions.left,
 	right = PasswordChangeBoxBackButtonPositions.right
-};
+}
 
 export interface IPasswordRecoveryBoxMessageProps {
 	message?: string;
