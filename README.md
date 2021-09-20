@@ -337,7 +337,8 @@ Same as [here](https://github.com/alexboia/LVD-FluentUi-PasswordChangeBox#passwo
 ### Version 0.0.2
 
 - Added type definitions;
-- Fixed type - Renamed `onPasswordRecoveryBoxInitiatlized` to `onPasswordRecoveryBoxInitialized`.
+- Fixed type - Renamed `onPasswordRecoveryBoxInitiatlized` to `onPasswordRecoveryBoxInitialized`;
+- Updated dependencies.
 
 ### Version 0.0.1
 
